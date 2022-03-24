@@ -19,7 +19,7 @@
 			<collision name="rigidgroup_back_left_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_left_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_left_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -27,7 +27,7 @@
 			<visual name="rigidgroup_back_left_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_left_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_left_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -51,7 +51,7 @@
 			<collision name="rigidgroup_front_left_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_left_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_left_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -59,7 +59,7 @@
 			<visual name="rigidgroup_front_left_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_left_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_left_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -83,7 +83,7 @@
 			<collision name="rigidgroup_back_right_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_right_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_right_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -91,7 +91,7 @@
 			<visual name="rigidgroup_back_right_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_right_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_right_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -123,7 +123,7 @@
 			<visual name="rigidgroup_front_right_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_right_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_right_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -147,7 +147,7 @@
 			<collision name="rigidgroup_middle_suspension_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_middle_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_middle_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -155,7 +155,7 @@
 			<visual name="rigidgroup_middle_suspension_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_middle_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_middle_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -179,7 +179,7 @@
 			<collision name="rigidgroup_front_suspension_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -187,7 +187,7 @@
 			<visual name="rigidgroup_front_suspension_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -211,7 +211,7 @@
 			<collision name="rigidgroup_back_suspension_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -219,7 +219,7 @@
 			<visual name="rigidgroup_back_suspension_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_suspension.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_suspension.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -243,7 +243,7 @@
 			<collision name="rigidgroup_frame_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_frame.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_frame.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -251,7 +251,7 @@
 			<visual name="rigidgroup_frame_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_frame.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_frame.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -275,7 +275,7 @@
 			<collision name="rigidgroup_front_body_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_body.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_body.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -283,7 +283,7 @@
 			<visual name="rigidgroup_front_body_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_body.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_body.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -307,7 +307,7 @@
 			<collision name="rigidgroup_back_body_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_body.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_body.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -315,7 +315,7 @@
 			<visual name="rigidgroup_back_body_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_body.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_body.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -339,7 +339,7 @@
 			<collision name="rigidgroup_chassis_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_chassis.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_chassis.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -347,7 +347,7 @@
 			<visual name="rigidgroup_chassis_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_chassis.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_chassis.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -371,7 +371,7 @@
 			<collision name="rigidgroup_back_plastic_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_plastic.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_plastic.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -379,7 +379,7 @@
 			<visual name="rigidgroup_back_plastic_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_back_plastic.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_back_plastic.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -403,7 +403,7 @@
 			<collision name="rigidgroup_front_plastic_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_plastic.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_plastic.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -411,7 +411,7 @@
 			<visual name="rigidgroup_front_plastic_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_plastic.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_plastic.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -435,7 +435,7 @@
 			<collision name="rigidgroup_display_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_display.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_display.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -443,7 +443,7 @@
 			<visual name="rigidgroup_display_visual">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_display.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_display.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
