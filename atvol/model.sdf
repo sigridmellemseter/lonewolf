@@ -115,7 +115,7 @@
 			<collision name="rigidgroup_front_right_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model:///meshes/CAD/rigidgroup_front_right_wheel.stl</uri>
+						<uri>model://atvol/meshes/CAD/rigidgroup_front_right_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
