@@ -1,0 +1,3 @@
+[console_scripts]
+atv_node = atv_pkg.atv_node:main
+
