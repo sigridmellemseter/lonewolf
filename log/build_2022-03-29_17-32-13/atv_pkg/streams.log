@@ -1,0 +1,21 @@
+[0.703s] Invoking command in '/home/cecilnik/lonewolf/src/atv_pkg': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_pkg build --build-base /home/cecilnik/lonewolf/build/atv_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_pkg --record /home/cecilnik/lonewolf/build/atv_pkg/install.log --single-version-externally-managed
+[0.943s] running egg_info
+[0.944s] writing ../../build/atv_pkg/atv_pkg.egg-info/PKG-INFO
+[0.944s] writing dependency_links to ../../build/atv_pkg/atv_pkg.egg-info/dependency_links.txt
+[0.944s] writing entry points to ../../build/atv_pkg/atv_pkg.egg-info/entry_points.txt
+[0.944s] writing requirements to ../../build/atv_pkg/atv_pkg.egg-info/requires.txt
+[0.944s] writing top-level names to ../../build/atv_pkg/atv_pkg.egg-info/top_level.txt
+[0.981s] reading manifest file '../../build/atv_pkg/atv_pkg.egg-info/SOURCES.txt'
+[0.982s] writing manifest file '../../build/atv_pkg/atv_pkg.egg-info/SOURCES.txt'
+[0.982s] running build
+[0.982s] running build_py
+[0.982s] running install
+[0.983s] running install_lib
+[0.984s] running install_data
+[0.985s] running install_egg_info
+[0.987s] removing '/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages/atv_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.987s] Copying ../../build/atv_pkg/atv_pkg.egg-info to /home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages/atv_pkg-0.0.0-py3.8.egg-info
+[0.988s] running install_scripts
+[1.005s] Installing atv_node script to /home/cecilnik/lonewolf/install/atv_pkg/lib/atv_pkg
+[1.006s] writing list of installed files to '/home/cecilnik/lonewolf/build/atv_pkg/install.log'
+[1.029s] Invoked command in '/home/cecilnik/lonewolf/src/atv_pkg' returned '0': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_pkg build --build-base /home/cecilnik/lonewolf/build/atv_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_pkg --record /home/cecilnik/lonewolf/build/atv_pkg/install.log --single-version-externally-managed
