@@ -450,7 +450,7 @@
 			</visual>
 		</link>
 
-						<!-- ****************************** LIDAR *****************************    -->
+<!-- ****************************** LIDAR *****************************    -->
 		<link name="lidar_link">    
 			<inertial>
 				<pose>0.215 -0.47 0.8 0 0 0</pose>
@@ -527,9 +527,9 @@
 		</link>
 						<!-- ****************************** LIDAR END *****************************    -->
 		<joint name="lidar_joint" type="fixed">
-    		<parent>rigidgroup_fpla</parent>
-    		<child>lidar_link</child>
-    		<pose>0 0 0 0 0 0</pose>
+    			<parent>rigidgroup_fpla</parent>
+    			<child>lidar_link</child>
+    			<pose>0 0 0 0 0 0</pose>
   		</joint>
 		
 
@@ -551,16 +551,19 @@
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
+		
 		<joint name="rigid_backsusp" type="fixed">
 			<parent>rigidgroup_ms</parent>
 			<child>rigidgroup_bs</child>
 			<pose frame="">3.142019977531163e-12 1.7053025658242404e-15 -2.3314683517128286e-17 0 0 0</pose>
 		</joint>
+		
 		<joint name="rigid_frame" type="fixed">
 			<parent>rigidgroup_bl</parent>
 			<child>rigidgroup_frame</child>
 			<pose frame="">-0.07416461484727449 -0.004761343214925518 -0.4028918799135086 0 0 0</pose>
 		</joint>
+		
 		<joint name="rev_blw" type="revolute">
 			<parent>rigidgroup_bs</parent>
 			<child>rigidgroupblf</child>
@@ -638,5 +641,34 @@
 			<child>rigidgroup_disp</child>
 			<pose frame="">-0.1278103305537936 -0.0009211848983589022 -0.049274795754115815 0 0 0</pose>
 		</joint>
+		
+		<!-- Controls the differential drive robot -->	       
+	       <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+		 <ros>
+		   <namespace>/demo</namespace>
+		   <remapping>cmd_vel:=cmd_vel</remapping>
+		   <remapping>odom:=odom</remapping>
+		 </ros>
+
+		 <!-- wheels -->
+		 <left_joint>rev_flw</left_joint>
+		 <right_joint>rev_frw</right_joint>
+
+		 <!-- kinematics -->
+		 <wheel_separation>0.914</wheel_separation>
+		 <wheel_diameter>0.66</wheel_diameter>
+
+		 <!-- limits -->
+		 <max_wheel_torque>20</max_wheel_torque>
+		 <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+		 <!-- output -->
+		 <publish_odom>true</publish_odom>
+		 <publish_odom_tf>true</publish_odom_tf>
+		 <publish_wheel_tf>true</publish_wheel_tf>
+
+		 <odometry_frame>odom</odometry_frame>
+		 <robot_base_frame>rigidgroup_bl</robot_base_frame>
+	       </plugin>
 	</model>
 </sdf>
