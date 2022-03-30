@@ -18,15 +18,20 @@ Launches Gazebo and spawns a model
 """
 # A bunch of software packages that are needed to launch ROS2
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
+from launch.actions import ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import ThisLaunchFileDir,LaunchConfiguration
 from launch_ros.actions import Node
-from launch.actions import ExecuteProcess
-from ament_index_python.packages import get_package_share_directory
+
+import xacro
+package_name = 'atv_pkg'
 
 def generate_launch_description():
+
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
     world_file_name = 'forest.world'
     pkg_dir = get_package_share_directory('atv_pkg')
@@ -35,6 +40,18 @@ def generate_launch_description():
 
     world = os.path.join(pkg_dir, 'worlds', world_file_name)
     launch_file_dir = os.path.join(pkg_dir, 'launch')
+
+    #unsure if this is needed or right
+    robot_description_path = os.path.join('share', package_name, 'models/atvkda/'), glob('./models/atvkda/*')
+    
+    robot_description = {'robot_desription': xacro.process_file(robot_description_path).toxml} 
+
+    joint_state_publisher_node = Node(package='joint_state_publisher',
+        executable='joint_state_publisher', name='joint_state_publisher')
+
+    robot_state_publisher_node = Node( package='robot_state_publisher',
+        executable='robot_state_publisher', output='both', parameters=[robot_description],)
+    #end of unsureity
 
     gazebo = ExecuteProcess(
             cmd=['gazebo', '--verbose', world, '-s', 'libgazebo_ros_init.so', 
@@ -50,6 +67,8 @@ def generate_launch_description():
                         output='screen')
 
     return LaunchDescription([
+        joint_state_publisher_node, 
+        robot_state_publisher_node, 
         gazebo,
         spawn_entity,
     ])
