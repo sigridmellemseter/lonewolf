@@ -23,6 +23,26 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+					<contact>
+						<ode>
+							<soft_cfm>0</soft_cfm>
+							<soft_erp>0.2</soft_erp>
+							<kp>1e+13</kp>
+							<kd>1</kd>
+							<max_vel>0.01</max_vel>
+							<min_depth>0.01</min_depth>
+						</ode>
+					</contact>
+				</surface>
 			</collision>
 			<visual name="rigidgroupblf_visual">
 				<geometry>
@@ -55,6 +75,26 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+					<contact>
+						<ode>
+							<soft_cfm>0</soft_cfm>
+							<soft_erp>0.2</soft_erp>
+							<kp>1e+13</kp>
+							<kd>1</kd>
+							<max_vel>0.01</max_vel>
+							<min_depth>0.01</min_depth>
+						</ode>
+					</contact>
+				</surface>
 			</collision>
 			<visual name="rigidgroupflw_visual">
 				<geometry>
@@ -87,6 +127,26 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+					<contact>
+						<ode>
+							<soft_cfm>0</soft_cfm>
+							<soft_erp>0.2</soft_erp>
+							<kp>1e+13</kp>
+							<kd>1</kd>
+							<max_vel>0.01</max_vel>
+							<min_depth>0.01</min_depth>
+						</ode>
+					</contact>
+				</surface>
 			</collision>
 			<visual name="rigidgroup_brw_visual">
 				<geometry>
@@ -119,6 +179,26 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>1</mu>
+							<mu2>1</mu2>
+							<slip1>0</slip1>
+							<slip2>0</slip2>
+						</ode>
+					</friction>
+					<contact>
+						<ode>
+							<soft_cfm>0</soft_cfm>
+							<soft_erp>0.2</soft_erp>
+							<kp>1e+13</kp>
+							<kd>1</kd>
+							<max_vel>0.01</max_vel>
+							<min_depth>0.01</min_depth>
+						</ode>
+					</contact>
+				</surface>
 			</collision>
 			<visual name="rigidgroup_frw_visual">
 				<geometry>
