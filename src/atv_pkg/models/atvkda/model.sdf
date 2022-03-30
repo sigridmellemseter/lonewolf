@@ -651,6 +651,7 @@
 		 </ros>
 
 		 <!-- wheels -->
+		 <num_wheel_pairs>2</num_wheel_pairs>
 		 <left_joint>rev_flw</left_joint>
 		 <left_joint>rev_blw</left_joint>
 		 <right_joint>rev_frw</right_joint>
