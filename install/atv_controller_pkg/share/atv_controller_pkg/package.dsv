@@ -1,0 +1,6 @@
+source;share/atv_controller_pkg/hook/pythonpath.ps1
+source;share/atv_controller_pkg/hook/pythonpath.dsv
+source;share/atv_controller_pkg/hook/pythonpath.sh
+source;share/atv_controller_pkg/hook/ament_prefix_path.ps1
+source;share/atv_controller_pkg/hook/ament_prefix_path.dsv
+source;share/atv_controller_pkg/hook/ament_prefix_path.sh

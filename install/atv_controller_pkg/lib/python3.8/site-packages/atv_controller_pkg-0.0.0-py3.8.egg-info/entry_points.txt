@@ -1,0 +1,4 @@
+[console_scripts]
+atv_controller = atv_controller_pkg.atv_controller:main
+atv_estimator = atv_controller_pkg.atv_estimator:main
+
