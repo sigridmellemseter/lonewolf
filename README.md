@@ -2,7 +2,11 @@
 Repository for the bachelor thesis: ROS simulated world for ATV and finding optimal SLAM algorithm for generated point cloud
 
 ### How to open point cloud in rviz: 
-
+Make sure you have the Velodyne package for foxy installed: 
+```
+sudo apt-get install ros-foxy-velodyne 
+```
+Then launch the simualor:
 ```
 ros2 launch atv_pkg atv_world.launch.py
 ```
