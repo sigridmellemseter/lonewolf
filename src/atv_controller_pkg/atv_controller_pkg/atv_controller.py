@@ -66,7 +66,7 @@ class Controller(Node):
     # sensor_msgs/LaserScan     
     self.scan_subscriber = self.create_subscription(
                            LaserScan,
-                           '/demo/laser/out',
+                           '/demo/gazebo_ros_laser_controller/out',
                            self.scan_callback,
                            qos_profile=qos_profile_sensor_data)
                             
