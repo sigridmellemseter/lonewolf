@@ -5,6 +5,7 @@
 /home/cecilnik/lonewolf/install/atv_pkg/share/ament_index/resource_index/packages/atv_pkg
 /home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.xml
 /home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/launch/atv_world.launch.py
+/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/launch/atv_rviz.launch.py
 /home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/worlds/forest.world
 /home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/models/forest_world/model.config
 /home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/models/forest_world/model.sdf

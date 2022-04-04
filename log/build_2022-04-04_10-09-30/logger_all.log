@@ -1,0 +1,320 @@
+[0.152s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.152s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f07c13b2d60>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f07c13b2d60>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f07c13bd310>)
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.158s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cecilnik/lonewolf'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extensions ['python_setup_py']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvkda/meshes/CAD) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/atvol/meshes/CAD) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'ros'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['cmake', 'python']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'cmake'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'python'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extensions ['python_setup_py']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(gazebomodels/velodyne_VLP16/meshes) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_controller_pkg) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atv_controller_pkg' with type 'ros.ament_python' and name 'atv_controller_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/atv_pkg) by extension 'ros'
+[0.183s] DEBUG:colcon.colcon_core.package_identification:Package 'src/atv_pkg' with type 'ros.ament_python' and name 'atv_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'ignore_ament_install'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['colcon_pkg']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'colcon_pkg'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['colcon_meta']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'colcon_meta'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['ros']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'ros'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['cmake', 'python']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'cmake'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'python'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extensions ['python_setup_py']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/world_plugins) by extension 'python_setup_py'
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_target' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'atv_controller_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.205s] DEBUG:colcon.colcon_core.verb:Building package 'atv_controller_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cecilnik/lonewolf/build/atv_controller_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cecilnik/lonewolf/install/atv_controller_pkg', 'merge_install': False, 'path': '/home/cecilnik/lonewolf/src/atv_controller_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_args' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_target' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'atv_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'atv_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cecilnik/lonewolf/build/atv_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cecilnik/lonewolf/install/atv_pkg', 'merge_install': False, 'path': '/home/cecilnik/lonewolf/src/atv_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.211s] WARNING:colcon.colcon_core.verb:Some selected packages are already built in one or more underlay workspaces:
+	'atv_controller_pkg' is in: /home/cecilnik/lonewolf/install/atv_controller_pkg
+	'atv_pkg' is in: /home/cecilnik/lonewolf/install/atv_pkg
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding atv_controller_pkg atv_pkg
+
+This may be promoted to an error in a future release of colcon-core.
+[0.211s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.213s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.213s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cecilnik/lonewolf/src/atv_controller_pkg' with build type 'ament_python'
+[0.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('atv_controller_pkg', 'ament_prefix_path')
+[0.217s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/ament_prefix_path.ps1'
+[0.218s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/ament_prefix_path.dsv'
+[0.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/ament_prefix_path.sh'
+[0.219s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.219s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.227s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cecilnik/lonewolf/src/atv_pkg' with build type 'ament_python'
+[0.228s] Level 1:colcon.colcon_core.shell:create_environment_hook('atv_pkg', 'ament_prefix_path')
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/ament_prefix_path.ps1'
+[0.230s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/ament_prefix_path.dsv'
+[0.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/ament_prefix_path.sh'
+[0.232s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.492s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cecilnik/lonewolf/src/atv_controller_pkg'
+[0.493s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.493s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.745s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cecilnik/lonewolf/src/atv_pkg'
+[0.746s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.746s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cecilnik/lonewolf/src/atv_controller_pkg': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_controller_pkg build --build-base /home/cecilnik/lonewolf/build/atv_controller_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_controller_pkg --record /home/cecilnik/lonewolf/build/atv_controller_pkg/install.log --single-version-externally-managed
+[1.255s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cecilnik/lonewolf/src/atv_pkg': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_pkg build --build-base /home/cecilnik/lonewolf/build/atv_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_pkg --record /home/cecilnik/lonewolf/build/atv_pkg/install.log --single-version-externally-managed
+[1.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cecilnik/lonewolf/src/atv_controller_pkg' returned '0': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_controller_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_controller_pkg build --build-base /home/cecilnik/lonewolf/build/atv_controller_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_controller_pkg --record /home/cecilnik/lonewolf/build/atv_controller_pkg/install.log --single-version-externally-managed
+[1.604s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg' for CMake module files
+[1.605s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg' for CMake config files
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg/lib'
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg/bin'
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg/lib/pkgconfig/atv_controller_pkg.pc'
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_controller_pkg/lib/python3.8/site-packages'
+[1.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('atv_controller_pkg', 'pythonpath')
+[1.607s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/pythonpath.ps1'
+[1.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/pythonpath.dsv'
+[1.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/hook/pythonpath.sh'
+[1.608s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atv_controller_pkg)
+[1.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/package.ps1'
+[1.610s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/package.dsv'
+[1.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/package.sh'
+[1.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/package.bash'
+[1.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_controller_pkg/share/atv_controller_pkg/package.zsh'
+[1.614s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cecilnik/lonewolf/install/atv_controller_pkg/share/colcon-core/packages/atv_controller_pkg)
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg' for CMake module files
+[1.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cecilnik/lonewolf/src/atv_pkg' returned '0': PYTHONPATH=/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/atv_pkg build --build-base /home/cecilnik/lonewolf/build/atv_pkg/build install --prefix /home/cecilnik/lonewolf/install/atv_pkg --record /home/cecilnik/lonewolf/build/atv_pkg/install.log --single-version-externally-managed
+[1.618s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg' for CMake config files
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg/lib'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg/bin'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg/lib/pkgconfig/atv_pkg.pc'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/cecilnik/lonewolf/install/atv_pkg/lib/python3.8/site-packages'
+[1.619s] Level 1:colcon.colcon_core.shell:create_environment_hook('atv_pkg', 'pythonpath')
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/pythonpath.ps1'
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/pythonpath.dsv'
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/hook/pythonpath.sh'
+[1.621s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(atv_pkg)
+[1.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.ps1'
+[1.622s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.dsv'
+[1.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.sh'
+[1.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.bash'
+[1.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/cecilnik/lonewolf/install/atv_pkg/share/atv_pkg/package.zsh'
+[1.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cecilnik/lonewolf/install/atv_pkg/share/colcon-core/packages/atv_pkg)
+[1.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.625s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.634s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.634s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.634s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.655s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.656s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cecilnik/lonewolf/install/local_setup.ps1'
+[1.658s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cecilnik/lonewolf/install/_local_setup_util_ps1.py'
+[1.661s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cecilnik/lonewolf/install/setup.ps1'
+[1.664s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cecilnik/lonewolf/install/local_setup.sh'
+[1.665s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cecilnik/lonewolf/install/_local_setup_util_sh.py'
+[1.666s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cecilnik/lonewolf/install/setup.sh'
+[1.668s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cecilnik/lonewolf/install/local_setup.bash'
+[1.669s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cecilnik/lonewolf/install/setup.bash'
+[1.670s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cecilnik/lonewolf/install/local_setup.zsh'
+[1.671s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cecilnik/lonewolf/install/setup.zsh'

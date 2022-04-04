@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/atv_controller_pkg/atv_controller_pkg.egg-info
+writing ../../build/atv_controller_pkg/atv_controller_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/atv_controller_pkg/atv_controller_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/atv_controller_pkg/atv_controller_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/atv_controller_pkg/atv_controller_pkg.egg-info/requires.txt
+writing top-level names to ../../build/atv_controller_pkg/atv_controller_pkg.egg-info/top_level.txt
+writing manifest file '../../build/atv_controller_pkg/atv_controller_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/atv_controller_pkg/atv_controller_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/atv_controller_pkg/atv_controller_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cecilnik/lonewolf/build/atv_controller_pkg/build
+creating /home/cecilnik/lonewolf/build/atv_controller_pkg/build/lib
+creating /home/cecilnik/lonewolf/build/atv_controller_pkg/build/lib/atv_controller_pkg
+copying atv_controller_pkg/atv_estimator.py -> /home/cecilnik/lonewolf/build/atv_controller_pkg/build/lib/atv_controller_pkg
+copying atv_controller_pkg/__init__.py -> /home/cecilnik/lonewolf/build/atv_controller_pkg/build/lib/atv_controller_pkg
+copying atv_controller_pkg/atv_controller.py -> /home/cecilnik/lonewolf/build/atv_controller_pkg/build/lib/atv_controller_pkg
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/cecilnik/lonewolf/install/atv_controller_pkg/lib/python3.8/site-packages/atv_controller_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/atv_controller_pkg/atv_controller_pkg.egg-info to /home/cecilnik/lonewolf/install/atv_controller_pkg/lib/python3.8/site-packages/atv_controller_pkg-0.0.0-py3.8.egg-info
+running install_scripts
+Installing atv_controller script to /home/cecilnik/lonewolf/install/atv_controller_pkg/lib/atv_controller_pkg
+Installing atv_estimator script to /home/cecilnik/lonewolf/install/atv_controller_pkg/lib/atv_controller_pkg
+writing list of installed files to '/home/cecilnik/lonewolf/build/atv_controller_pkg/install.log'

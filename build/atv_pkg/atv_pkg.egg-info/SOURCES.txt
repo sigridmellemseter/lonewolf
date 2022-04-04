@@ -16,6 +16,7 @@ setup.py
 ./worlds/forest.world
 atv_pkg/__init__.py
 atv_pkg/atv_node.py
+launch/atv_rviz.launch.py
 launch/atv_world.launch.py
 resource/atv_pkg
 test/test_copyright.py
