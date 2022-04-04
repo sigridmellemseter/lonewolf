@@ -789,7 +789,8 @@
 		 <right_joint>rev_brw</right_joint>
 
 		 <!-- kinematics -->
-		 <wheel_separation>0.914</wheel_separation>
+		 <wheel_separation>0.917913</wheel_separation>
+		 <wheel_separation>0.917913</wheel_separation>
 		 <wheel_diameter>0.66</wheel_diameter>
 
 		 <!-- limits -->
