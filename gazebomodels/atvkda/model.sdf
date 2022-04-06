@@ -1,25 +1,58 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
 	<model name="atvkda">
-		<link name="rigidgroupblf">
+		<pose>0 0 0.35 0 -0 0</pose>
+		<link name="rigid_body">
 			<self_collide>false</self_collide>
-			<pose frame="">-1.4987226668276301 -3.666651688488365e-05 0.0004817296459209424 0.0 -0.0 0.0</pose>
+			<pose frame="">-0.5509772858698141 -0.35921503762573787 0.4691281110478071 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>93.12530503402706</mass>
+				<mass>320</mass>
 				<inertia>
-					<ixx>2.3419526983406085</ixx>
-					<ixy>-0.005236824658468254</ixy>
-					<ixz>0.06736849418899855</ixz>
-					<iyy>212.99556731985604</iyy>
-					<iyz>0.0006602427488896839</iyz>
-					<izz>211.51624632366878</izz>
+					<ixx>1885.8715450981506</ixx>
+					<ixy>-788.8659932657681</ixy>
+					<ixz>1054.1788863708364</ixz>
+					<iyy>4090.969858369452</iyy>
+					<iyz>672.3583823903066</iyz>
+					<izz>4008.555494215648</izz>
 				</inertia>
 			</inertial>
-			<collision name="rigidgroupblf_collision">
+			<collision name="rigid_body_collision">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroupblf.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_body.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="rigid_body_visual">
+				<geometry>
+					<mesh>
+						<uri>model://atvkda/meshes/CAD/rigid_body.stl</uri>
+						<scale>0.001 0.001 0.001</scale>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+		<link name="rigid_left_front_wheel">
+			<self_collide>false</self_collide>
+			<pose frame="">0.149313570651654 0.10837677345109908 -0.0027835333140371534 0.0 -0.0 0.0</pose>
+			<inertial>
+				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
+				<mass>10</mass>
+				<inertia>
+					<ixx>15.143590881522137</ixx>
+					<ixy>-4.802538758666648</ixy>
+					<ixz>0.12333363363217081</ixz>
+					<iyy>26.521764239610228</iyy>
+					<iyz>0.08953771605692044</iyz>
+					<izz>21.757922353753656</izz>
+				</inertia>
+			</inertial>
+			<collision name="rigid_left_front_wheel_collision">
+				<geometry>
+					<mesh>
+						<uri>model://atvkda/meshes/CAD/rigid_left_front_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -44,34 +77,34 @@
 					</contact>
 				</surface>
 			</collision>
-			<visual name="rigidgroupblf_visual">
+			<visual name="rigid_left_front_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroupblf.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_left_front_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
 			</visual>
 		</link>
-		<link name="rigidgroupflw">
+		<link name="rigid_right_front_wheels">
 			<self_collide>false</self_collide>
-			<pose frame="">-0.004568111223673113 -0.0011081553556992528 0.0010767537212480968 0.0 -0.0 0.0</pose>
+			<pose frame="">0.14931385014328322 -0.7921332073751959 -0.0027817838858620993 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>87.01058646447497</mass>
+				<mass>10</mass>
 				<inertia>
-					<ixx>2.0405153896601376</ixx>
-					<ixy>-0.0163557998728011</ixy>
-					<ixz>-1.038678520533976e-05</ixz>
-					<iyy>3.5356879636346807</iyy>
-					<iyz>0.0004931793585946345</iyz>
-					<izz>2.04155470278066</izz>
+					<ixx>197.87077943866038</ixx>
+					<ixy>35.10051570917194</ixy>
+					<ixz>0.12332250487162914</ixz>
+					<iyy>26.52024193662049</iyy>
+					<iyz>-0.6539456907207306</iyz>
+					<izz>204.48474143510109</izz>
 				</inertia>
 			</inertial>
-			<collision name="rigidgroupflw_collision">
+			<collision name="rigid_right_front_wheels_collision">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroupflw.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_right_front_wheels.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -96,34 +129,34 @@
 					</contact>
 				</surface>
 			</collision>
-			<visual name="rigidgroupflw_visual">
+			<visual name="rigid_right_front_wheels_visual">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroupflw.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_right_front_wheels.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
 			</visual>
 		</link>
-		<link name="rigidgroup_brw">
+		<link name="rigid_left_back_wheel">
 			<self_collide>false</self_collide>
-			<pose frame="">-1.4994929630455804 -0.9178313379866745 0.0011083738077235711 0.0 -0.0 0.0</pose>
+			<pose frame="">-1.3496864291871955 0.10837677345106926 -0.0033596523819218326 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>92.9320928829008</mass>
+				<mass>10</mass>
 				<inertia>
-					<ixx>80.6360052553938</ixx>
-					<ixy>-127.90073788395303</ixy>
-					<ixz>0.15449204329147023</ixz>
-					<iyy>212.77543205565573</iyy>
-					<iyz>0.09679835565612936</iyz>
-					<izz>289.59142330316485</izz>
+					<ixx>15.144641248094105</ixx>
+					<ixy>43.41142623761963</ixy>
+					<ixz>-1.34575725690412</ixz>
+					<iyy>560.5370054792465</iyy>
+					<iyz>0.1080680593351053</iyz>
+					<izz>555.7721132268188</izz>
 				</inertia>
 			</inertial>
-			<collision name="rigidgroup_brw_collision">
+			<collision name="rigid_left_back_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_brw.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_left_back_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -148,34 +181,34 @@
 					</contact>
 				</surface>
 			</collision>
-			<visual name="rigidgroup_brw_visual">
+			<visual name="rigid_left_back_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_brw.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_left_back_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
 			</visual>
 		</link>
-		<link name="rigidgroup_frw">
+		<link name="rigid_right_back_wheel">
 			<self_collide>false</self_collide>
-			<pose frame="">0.004253157259039672 -0.9170511125050033 0.0010715075325381765 0.0 -0.0 0.0</pose>
+			<pose frame="">-1.3496861498881583 -0.792133207375183 -0.003357902953795265 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>85.88173702192367</mass>
+				<mass>10</mass>
 				<inertia>
-					<ixx>74.2571572862643</ixx>
-					<ixy>0.3176465364698314</ixy>
-					<ixz>-1.1056964774156766e-05</ixz>
-					<iyy>3.5081933279338715</iyy>
-					<iyz>0.08685582505786119</iyz>
-					<izz>74.25790171388641</izz>
+					<ixx>197.87182915903855</ixx>
+					<ixy>-317.2825380058341</ixy>
+					<ixz>-1.3449230007096538</ixz>
+					<iyy>560.5108437180864</iyy>
+					<iyz>-0.7893790439387832</iyz>
+					<izz>738.4742934961762</izz>
 				</inertia>
 			</inertial>
-			<collision name="rigidgroup_frw_collision">
+			<collision name="rigid_right_back_wheel_collision">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_frw.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_right_back_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
@@ -200,341 +233,22 @@
 					</contact>
 				</surface>
 			</collision>
-			<visual name="rigidgroup_frw_visual">
+			<visual name="rigid_right_back_wheel_visual">
 				<geometry>
 					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_frw.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_ms">
-			<self_collide>false</self_collide>
-			<pose frame="">-0.7500233307078246 -0.4745776206569085 0.009569461474629585 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>43.25350891190138</mass>
-				<inertia>
-					<ixx>9.773395632900472</ixx>
-					<ixy>-15.395839421231571</ixy>
-					<ixz>0.3090687502976207</ixz>
-					<iyy>32.74955071209621</iyy>
-					<iyz>0.19643374569697516</iyz>
-					<izz>42.486845650291805</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_ms_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_ms.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_ms_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_ms.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_fs">
-			<self_collide>false</self_collide>
-			<pose frame="">7.841357160667301e-05 -0.4745776206569085 0.009025821377832014 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>20.286551817218136</mass>
-				<inertia>
-					<ixx>5.9875091634257585</ixx>
-					<ixy>0.0007549300710650245</ixy>
-					<ixz>-1.435774397611757e-05</ixz>
-					<iyy>0.010781725564192858</iyy>
-					<iyz>0.08689648787285725</iyz>
-					<izz>5.985856636240167</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_fs_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fs.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_fs_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fs.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_bs">
-			<self_collide>false</self_collide>
-			<pose frame="">-1.4989215864346725 -0.4745776206569102 0.008449702309857423 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>20.286551817218136</mass>
-				<inertia>
-					<ixx>5.987304918786353</ixx>
-					<ixy>-14.43093276561929</ixy>
-					<ixz>0.25693812901304786</ixz>
-					<iyy>45.589710659678545</iyy>
-					<iyz>0.08134987648893</iyz>
-					<izz>51.56498981499393</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_bs_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bs.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_bs_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bs.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_frame">
-			<self_collide>false</self_collide>
-			<pose frame="">-0.7909569517984943 -0.46981627744198307 0.3726922493781549 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>62.31135772288573</mass>
-				<inertia>
-					<ixx>29.788359728904325</ixx>
-					<ixy>-23.249776141266302</ixy>
-					<ixz>18.663648801384067</ixz>
-					<iyy>53.2175106181128</iyy>
-					<iyz>10.83300412278536</iyz>
-					<izz>57.746770252599056</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_frame_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_frame.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_frame_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_frame.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_fb">
-			<self_collide>false</self_collide>
-			<pose frame="">-0.08429479996121851 -0.4745773891478675 0.48489517934888093 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1992.2899096655206</mass>
-				<inertia>
-					<ixx>1153.1216990162154</ixx>
-					<ixy>-79.70041521646952</ixy>
-					<ixz>51.664066693653595</ixz>
-					<iyy>643.2775678652457</iyy>
-					<iyz>458.4664866053058</iyz>
-					<izz>787.2932315230606</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_fb_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fb.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_fb_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fb.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_bb">
-			<self_collide>false</self_collide>
-			<pose frame="">-1.431707058104791 -0.4746501152943449 0.4925481707132407 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1695.242276548398</mass>
-				<inertia>
-					<ixx>1002.3210412714697</ixx>
-					<ixy>-1152.0803224323795</ixy>
-					<ixz>1242.1072131556043</ixz>
-					<iyy>4021.1244249098013</iyy>
-					<iyz>396.35371520993795</iyz>
-					<izz>4126.5001153813855</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_bb_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bb.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_bb_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bb.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_bl">
-			<self_collide>false</self_collide>
-			<pose frame="">-0.6949729903283752 -0.47457762291557637 0.204095056014492 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>32.707042092199075</mass>
-				<inertia>
-					<ixx>10.762303392350928</ixx>
-					<ixy>-10.787391703034826</ixy>
-					<ixz>4.235767501743929</ixz>
-					<iyy>32.621547150929715</iyy>
-					<iyz>3.167969611079242</iyz>
-					<izz>37.56500915119501</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_bl_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bl.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_bl_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bl.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_bpla">
-			<self_collide>false</self_collide>
-			<pose frame="">-1.7554939868399513 -0.4748870572083408 0.7105313142917383 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>52.99744608553892</mass>
-				<inertia>
-					<ixx>43.16809134570954</ixx>
-					<ixy>-44.17978300465143</ixy>
-					<ixz>66.17127627354122</ixz>
-					<iyy>191.2676017437708</iyy>
-					<iyz>17.882443631566996</iyz>
-					<izz>180.91084373224493</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_bpla_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bpla.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_bpla_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_bpla.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_fpla">
-			<self_collide>false</self_collide>
-			<pose frame="">0.09422070791867372 -0.47488395870958783 0.6812039602879049 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>52.99734226263907</mass>
-				<inertia>
-					<ixx>41.003581247534775</ixx>
-					<ixy>2.3691672617640624</ixy>
-					<ixz>-3.3469087808290245</ixz>
-					<iyy>26.24953677679593</iyy>
-					<iyz>17.144307450108823</iyz>
-					<izz>18.056928397849926</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_fpla_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fpla.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_fpla_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_fpla.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</visual>
-		</link>
-		<link name="rigidgroup_disp">
-			<self_collide>false</self_collide>
-			<pose frame="">-0.1568811438157495 -0.47365643575854754 0.7352794536686471 0.0 -0.0 0.0</pose>
-			<inertial>
-				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>8.543110428968873</mass>
-				<inertia>
-					<ixx>6.622749332499692</ixx>
-					<ixy>-0.6348444647668607</ixy>
-					<ixz>0.9873367295391909</ixz>
-					<iyy>4.874722207686259</iyy>
-					<iyz>2.9751225238674817</iyz>
-					<izz>2.2307498508647807</izz>
-				</inertia>
-			</inertial>
-			<collision name="rigidgroup_disp_collision">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_disp.stl</uri>
-						<scale>0.001 0.001 0.001</scale>
-					</mesh>
-				</geometry>
-			</collision>
-			<visual name="rigidgroup_disp_visual">
-				<geometry>
-					<mesh>
-						<uri>model://atvkda/meshes/CAD/rigidgroup_disp.stl</uri>
+						<uri>model://atvkda/meshes/CAD/rigid_right_back_wheel.stl</uri>
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
 			</visual>
 		</link>
 
+
 						<!-- ****************************** LIDAR *****************************    -->
 		<link name='base_footprint'>
-			<pose frame=''>0 0 0 0 0 0</pose>
+			<pose frame=''>0.235 -0.34 0.85933 0 0 0</pose>
 			<inertial>
-				<pose frame=''>0.215 -0.47 0.8 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 				<mass>2</mass>
 				<inertia>
 					<ixx>3.23643</ixx>
@@ -546,7 +260,7 @@
 				</inertia>
 			</inertial>
 			<collision name='base_footprint_collision_1'>
-				<pose frame=''>0.215 -0.47 0.79815 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 				<geometry>
 					<cylinder>
 						<length>0.0717</length>
@@ -568,7 +282,7 @@
 				<max_contacts>10</max_contacts>
 			</collision>
 			<visual name='base_footprint_visual_1'>
-				<pose frame=''>0.215 -0.47 0.7623 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 				<geometry>
 					<mesh>
 					<scale>1 1 1</scale>
@@ -583,7 +297,7 @@
 				</material>
 			</visual>
 			<visual name='base_footprint_visual_2'>
-				<pose frame=''>0.215 -0.47 0.7623 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 				<geometry>
 					<mesh>
 						<scale>1 1 1</scale>
@@ -598,7 +312,7 @@
 				</material>
 			</visual>
 			<visual name='base_footprint_visual_3'>
-				<pose frame=''>0.215 -0.47 0.7623 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 				<geometry>
 					<mesh>
 						<scale>1 1 1</scale>
@@ -614,7 +328,7 @@
 			</visual>
 			<sensor name='velodyne-VLP16' type='ray'>
 				<visualize>0</visualize>
-				<update_rate>10</update_rate>
+				<update_rate>5</update_rate>
 				<ray>
 					<scan>
 						<horizontal>
@@ -651,160 +365,96 @@
 					
 					<output_type>sensor_msgs/PointCloud</output_type> 
 				</plugin>
-				<pose frame=''>0.215 -0.47 0.8 0 0 0</pose>
+				<pose frame=''>0 0 0 0 0 0</pose>
 			</sensor>
 			<gravity>0</gravity>
 			<self_collide>0</self_collide>
 			<kinematic>0</kinematic>
 		</link>
-						<!-- ****************************** LIDAR END *****************************    -->
+	<!-- ****************************** LIDAR END *****************************    -->
+
+	<!-- ****************************** Joints **********************************   -->
+
 		<joint name="lidar_joint" type="fixed">
-    			<parent>rigidgroup_fpla</parent>
+    			<parent>rigid_body</parent>
     			<child>base_footprint</child>
-    			<pose>0 0 0 0 0 0</pose>
+    			<pose>>0 0 0 0 0 0</pose>
   		</joint>
-		
 
-		
-
-		<joint name="rigid_midsusp" type="fixed">
-			<parent>rigidgroup_bl</parent>
-			<child>rigidgroup_ms</child>
-			<pose frame="">-0.13509823593794423 0.0 -0.03976909200998328 0 0 0</pose>
-		</joint>
-		<joint name="turn" type="revolute">
-			<parent>rigidgroup_ms</parent>
-			<child>rigidgroup_fs</child>
-			<pose frame="">-3.1370377996664532e-12 0.0 1.1102230246251566e-18 0 0 0</pose>
+		<joint name="rev_right_back_wheel" type="revolute">
+			<parent>rigid_body</parent>
+			<child>rigid_right_back_wheel</child>
+			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>2.740877605288614e-46 -5.228165951985998e-16 -1.0</xyz>
-				<limit>
-					<lower>-0.1</lower>
-					<upper>0.1</upper>
-				</limit>
+				<xyz>0 1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="rigid_backsusp" type="fixed">
-			<parent>rigidgroup_ms</parent>
-			<child>rigidgroup_bs</child>
-			<pose frame="">3.142019977531163e-12 1.7053025658242404e-15 -2.3314683517128286e-17 0 0 0</pose>
-		</joint>
-		<joint name="rigid_frame" type="fixed">
-			<parent>rigidgroup_bl</parent>
-			<child>rigidgroup_frame</child>
-			<pose frame="">-0.07416461484727449 -0.004761343214925518 -0.4028918799135086 0 0 0</pose>
-		</joint>
-		<joint name="rev_blw" type="revolute">
-			<parent>rigidgroup_bs</parent>
-			<child>rigidgroupblf</child>
-			<pose frame="">-0.00019891960389998076 -0.017540954140023667 0.007967972663936214 0 0 0</pose>
+		<joint name="rev_left_back_wheel" type="revolute">
+			<parent>rigid_body</parent>
+			<child>rigid_left_back_wheel</child>
+			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>-8.137739410954359e-94 1.0 -5.236839569365882e-16</xyz>
-				<limit>
-					<lower>0.0</lower>
-					<upper>0.0</upper>
-				</limit>
+				<xyz>0 1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="rev_brw" type="revolute">
-			<parent>rigidgroup_bs</parent>
-			<child>rigidgroup_brw</child>
-			<pose frame="">0.0005713766140502231 -0.01374628267023411 0.007341328502134063 0 0 0</pose>
+		<joint name="rev_left_front_wheel" type="revolute">
+			<parent>rigid_body</parent>
+			<child>rigid_left_front_wheel</child>
+			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>-8.137739410954359e-94 1.0 -5.236839569365882e-16</xyz>
-				<limit>
-					<lower>0.0</lower>
-					<upper>0.0</upper>
-				</limit>
+				<xyz>0 -1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="rev_flw" type="revolute">
-			<parent>rigidgroup_fs</parent>
-			<child>rigidgroupflw</child>
-			<pose frame="">0.004646524792142748 -0.016469465301209213 0.007949067656583677 0 0 0</pose>
+		<joint name="rev_right_front_wheel" type="revolute">
+			<parent>rigid_body</parent>
+			<child>rigid_right_front_wheels</child>
+			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>-9.439771087128513e-42 -1.0 5.214735487998126e-16</xyz>
-				<limit>
-					<lower>0.0</lower>
-					<upper>0.0</upper>
-				</limit>
+				<xyz>0 -1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
-		<joint name="rev_frw" type="revolute">
-			<parent>rigidgroup_fs</parent>
-			<child>rigidgroup_frw</child>
-			<pose frame="">-0.004174743690570035 -0.014526508151905518 0.007954313845294072 0 0 0</pose>
-			<axis>
-				<xyz>-9.439771087128513e-42 -1.0 5.214735487998126e-16</xyz>
-				<limit>
-					<lower>0.0</lower>
-					<upper>0.0</upper>
-				</limit>
-				<use_parent_model_frame>0</use_parent_model_frame>
-			</axis>
-		</joint>
-		<joint name="rigid_fb" type="fixed">
-			<parent>rigidgroup_bl</parent>
-			<child>rigidgroup_fb</child>
-			<pose frame="">-0.2731996819461822 -2.315090420523802e-07 -0.011810032795997856 0 0 0</pose>
-		</joint>
-		<joint name="rigid_bb" type="fixed">
-			<parent>rigidgroup_bl</parent>
-			<child>rigidgroup_bb</child>
-			<pose frame="">0.016503894933808567 7.249463743804086e-05 -0.06700274082361041 0 0 0</pose>
-		</joint>
-		<joint name="rigid_bplastic" type="fixed">
-			<parent>rigidgroup_bb</parent>
-			<child>rigidgroup_bpla</child>
-			<pose frame="">-0.21055960728212966 0.0003094365514341746 -0.00021383099653363047 0 0 0</pose>
-		</joint>
-		<joint name="rigid_fplastic" type="fixed">
-			<parent>rigidgroup_fb</parent>
-			<child>rigidgroup_fpla</child>
-			<pose frame="">0.2563266663134111 0.00030633805270852577 -0.02496115575459882 0 0 0</pose>
-		</joint>
-		<joint name="rigid_display" type="fixed">
-			<parent>rigidgroup_fb</parent>
-			<child>rigidgroup_disp</child>
-			<pose frame="">-0.1278103305537936 -0.0009211848983589022 -0.049274795754115815 0 0 0</pose>
-		</joint>
-		
-		<!-- Controls the differential drive robot -->	       
-	       <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
-		 <ros>
-		   <namespace>/demo</namespace>
-		   <remapping>cmd_vel:=cmd_vel</remapping>
-		   <remapping>odom:=odom</remapping>
-		 </ros>
 
-		 <!-- wheels -->
-		 <num_wheel_pairs>2</num_wheel_pairs>
-		 <left_joint>rev_flw</left_joint>
-		 <left_joint>rev_blw</left_joint>
-		 <right_joint>rev_frw</right_joint>
-		 <right_joint>rev_brw</right_joint>
+	<!-- ****************************** Joints end**********************************   -->
+	
 
-		 <!-- kinematics -->
-		 <wheel_separation>0.917913</wheel_separation>
-		 <wheel_separation>0.917913</wheel_separation>
-		 <wheel_diameter>0.66</wheel_diameter>
+		<!-- Controls the differential drive robot -->	  
+		<plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+			<ros>
+				<namespace> /demo </namespace>
+				<remapping>cmd_vel:=cmd_vel</remapping>
+				<remapping>odom:=odom</remapping>
+			</ros>
 
-		 <!-- limits -->
-		 <max_wheel_torque>20</max_wheel_torque>
-		 <max_wheel_acceleration>10.0</max_wheel_acceleration>
+			<!-- Wheels -->
+			<num_wheel_pairs> 1 </num_wheel_pairs>
+			<odometry_frame> odom </odometry_frame>
 
-		 <!-- output -->
-		 <publish_odom>true</publish_odom>
-		 <publish_odom_tf>true</publish_odom_tf>
-		 <publish_wheel_tf>true</publish_wheel_tf>
-		 <update_rate>100.0</update_rate>
+			<left_joint>rev_left_back_wheel</left_joint>
+			<!--<left_joint>rev_left_front_wheel</left_joint>
+			<wheel_separation>0.917913</wheel_separation>
+			<wheel_diameter>0.66</wheel_diameter> -->
 
-		 <odometry_frame>odom</odometry_frame>
-		 <robot_base_frame>rigidgroup_bl</robot_base_frame>
-	       </plugin>
+			<right_joint>rev_right_back_wheel</right_joint>
+			<!--<right_joint>rev_right_front_wheel</right_joint> -->
+			<wheel_separation>0.914</wheel_separation>
+			<wheel_diameter>0.694622</wheel_diameter>
+
+		 	<!-- limits -->
+		 	<max_wheel_torque>100</max_wheel_torque>
+		 	<max_wheel_acceleration>40.0</max_wheel_acceleration>	
+			
+					 <!-- output -->
+			<publish_odom>true</publish_odom>
+			<publish_odom_tf>true</publish_odom_tf>
+			<publish_wheel_tf>true</publish_wheel_tf>
+			<update_rate>5</update_rate>
+
+			<odometry_frame>odom</odometry_frame>
+			<robot_base_frame>rigid_body</robot_base_frame>	
+		</plugin>
 	</model>
 </sdf>
