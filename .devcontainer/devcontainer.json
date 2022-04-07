@@ -2,6 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.231.4/containers/docker-existing-dockerfile
 {
 	"name": "Existing Dockerfile",
+	"runArgs": ["--init"],
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
@@ -10,7 +11,9 @@
 	"dockerFile": "../DockerFile.l4tbase.ros2.foxy",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"terminal.integrated.defaultProfiles.linux": "bash"
+	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": []
