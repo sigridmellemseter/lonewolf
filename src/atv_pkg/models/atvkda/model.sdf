@@ -32,6 +32,12 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1 1</ambient>
+					<diffuse>0.1 0.1 0.1 1</diffuse>
+					<specular>1.5 1.5 1.5 1</specular>
+					<emissive>0.05 0.05 0.05 1</emissive>
+				</material>
 			</visual>
 		</link>
 		<link name="rigid_left_front_wheel">
@@ -41,12 +47,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>10</mass>
 				<inertia>
-					<ixx>15.143590881522137</ixx>
-					<ixy>-4.802538758666648</ixy>
-					<ixz>0.12333363363217081</ixz>
-					<iyy>26.521764239610228</iyy>
-					<iyz>0.08953771605692044</iyz>
-					<izz>21.757922353753656</izz>
+					<ixx>0.3</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.3</iyy>
+					<iyz>0</iyz>
+					<izz>0.6</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_front_wheel_collision">
@@ -84,6 +90,12 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.01 0.01 0.01 1</ambient>
+					<diffuse>0.1 0.1 0.1 1</diffuse>
+					<specular>1.5 1.5 1.5 1</specular>
+					<emissive>0.001 0.001 0.001 1</emissive>
+				</material>
 			</visual>
 		</link>
 		<link name="rigid_right_front_wheels">
@@ -93,12 +105,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>10</mass>
 				<inertia>
-					<ixx>197.87077943866038</ixx>
-					<ixy>35.10051570917194</ixy>
-					<ixz>0.12332250487162914</ixz>
-					<iyy>26.52024193662049</iyy>
-					<iyz>-0.6539456907207306</iyz>
-					<izz>204.48474143510109</izz>
+					<ixx>0.3</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.3</iyy>
+					<iyz>0</iyz>
+					<izz>0.6</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_front_wheels_collision">
@@ -136,6 +148,12 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.01 0.01 0.01 1</ambient>
+					<diffuse>0.1 0.1 0.1 1</diffuse>
+					<specular>1.5 1.5 1.5 1</specular>
+					<emissive>0.001 0.001 0.001 1</emissive>
+				</material>
 			</visual>
 		</link>
 		<link name="rigid_left_back_wheel">
@@ -145,12 +163,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>10</mass>
 				<inertia>
-					<ixx>15.144641248094105</ixx>
-					<ixy>43.41142623761963</ixy>
-					<ixz>-1.34575725690412</ixz>
-					<iyy>560.5370054792465</iyy>
-					<iyz>0.1080680593351053</iyz>
-					<izz>555.7721132268188</izz>
+					<ixx>0.3</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.3</iyy>
+					<iyz>0</iyz>
+					<izz>0.6</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_back_wheel_collision">
@@ -188,6 +206,12 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.01 0.01 0.01 1</ambient>
+					<diffuse>0.1 0.1 0.1 1</diffuse>
+					<specular>1.5 1.5 1.5 1</specular>
+					<emissive>0.001 0.001 0.001 1</emissive>
+				</material>
 			</visual>
 		</link>
 		<link name="rigid_right_back_wheel">
@@ -197,12 +221,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>10</mass>
 				<inertia>
-					<ixx>197.87182915903855</ixx>
-					<ixy>-317.2825380058341</ixy>
-					<ixz>-1.3449230007096538</ixz>
-					<iyy>560.5108437180864</iyy>
-					<iyz>-0.7893790439387832</iyz>
-					<izz>738.4742934961762</izz>
+					<ixx>0.3</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.3</iyy>
+					<iyz>0</iyz>
+					<izz>0.6</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_back_wheel_collision">
@@ -240,6 +264,12 @@
 						<scale>0.001 0.001 0.001</scale>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.01 0.01 0.01 1</ambient>
+					<diffuse>0.1 0.1 0.1 1</diffuse>
+					<specular>1.5 1.5 1.5 1</specular>
+					<emissive>0.001 0.001 0.001 1</emissive>
+				</material>
 			</visual>
 		</link>
 
@@ -373,7 +403,68 @@
 		</link>
 	<!-- ****************************** LIDAR END *****************************    -->
 
+	<!-- ****************************** IMU *****************************    --> 
+	
+	 	<link name="imu">
+			<pose frame=''>0.235 -0.34 0.95933 0 0 0</pose>
+			<inertial>
+				<pose frame=''>0 0 0 0 0 0</pose>
+				<mass>0.1</mass>
+				<inertia>
+					<ixx>3.23643</ixx>
+					<ixy>0.0156863</ixy>
+					<ixz>0.065702</ixz>
+					<iyy>3.35996</iyy>
+					<iyz>-0.00821275</iyz>
+					<izz>3.32745</izz>
+				</inertia>
+			</inertial>
+			<collision name="imu_collision">
+				<pose frame=''>0 0 0 0 0 0 </pose>
+				<geometry>
+					<box>
+						<size> 0.05 0.05 0.01 </size>
+					</box>
+				</geometry>
+			</collision>
+			<visual name="imu_visual">
+				<geometry>
+					<box>
+						<size> 0.05 0.05 0.01 </size>
+					</box>
+				</geometry>
+			</visual>
+		
+			<sensor name="my_imu" type="imu">
+				<always_on>true</always_on>
+				<!-- Publish at 30 hz -->
+				<update_rate>30</update_rate>
+				<plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+					<ros>
+						<!-- Will publish to /imu/data -->
+						<namespace>/imu</namespace>
+						<remapping>~/out:=data</remapping>
+					</ros>
+				<!-- frame_name ommited, will be "my_link" -->
+				<output_type>sensor_msgs/Imu</output_type> 
+
+				</plugin>
+			</sensor>
+			<gravity>0</gravity>
+			<self_collide>0</self_collide>
+			<kinematic>0</kinematic>
+		</link>  
+		
+
+	<!-- ****************************** IMU END*****************************    -->
+
+
 	<!-- ****************************** Joints **********************************   -->
+		<joint name="imu_joint" type="fixed">
+    			<parent>rigid_body</parent>
+    			<child>imu</child>
+    			<pose>>0 0 0 0 0 0</pose>
+  		</joint>
 
 		<joint name="lidar_joint" type="fixed">
     			<parent>rigid_body</parent>
