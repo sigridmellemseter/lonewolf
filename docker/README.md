@@ -19,11 +19,11 @@ this, remember to log out and back in (or just reboot), because the change only 
 ## Setting up development with VSCode
 If you are new to ubuntu/linux, or don't already have any other specific plan on how you want to set up 
 development with docker, we recommend you do this.
-1. Install Visual Studio Code on your host computer. Then download the "Remote - Containers"-extension
+1. Install Visual Studio Code on your host computer. Then download the `Remote - Containers`-extension
 2. Script to build the file???
-3. To open the container in VSCode do CTRL + SHIFT + P and search for "Remote-Containers Reopen in Container".
+3. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
 The image should now start building.
-4. Once inside the container you can start by building the pipeline. Use CTRL+SHIFT+B, or enter colcon build (???)
+4. Once inside the container you can start by building the pipeline. Use `CTRL+SHIFT+B`, or enter colcon build (???)
 
 
 
