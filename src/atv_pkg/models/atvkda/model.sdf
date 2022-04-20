@@ -389,7 +389,7 @@
 					<topicName>/velodyne_points</topicName>
 					<frameName>/velodyne</frameName>
 					<min_range>0.9</min_range>
-					<max_range>130.0</max_range>
+					<max_range>130</max_range>
 					<gaussianNoise>0.008</gaussianNoise>
 					<robotNamespace>/</robotNamespace>
 					
@@ -495,7 +495,7 @@
 			<child>rigid_left_front_wheel</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>0 -1 0</xyz>
+				<xyz>0 1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
@@ -504,7 +504,7 @@
 			<child>rigid_right_front_wheels</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
-				<xyz>0 -1 0</xyz>
+				<xyz>0 1 0</xyz>
 				<use_parent_model_frame>0</use_parent_model_frame>
 			</axis>
 		</joint>
@@ -513,39 +513,49 @@
 	
 
 		<!-- Controls the differential drive robot -->	  
-		<plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+		<plugin name='skid_steer_drive' filename='libgazebo_ros_diff_drive.so'>
 			<ros>
+				<!-- Set namespace -->
 				<namespace> /demo </namespace>
-				<remapping>cmd_vel:=cmd_vel</remapping>
-				<remapping>odom:=odom</remapping>
+
+				<!-- Remap default topics -->
+				<argument>cmd_vel:=cmd_demo</argument>
+				<argument>odom:=odom_demo</argument>
 			</ros>
 
-			<!-- Wheels -->
-			<num_wheel_pairs> 1 </num_wheel_pairs>
-			<odometry_frame> odom </odometry_frame>
+			<update_rate>500</update_rate>
 
-			<left_joint>rev_left_back_wheel</left_joint>
-			<!--<left_joint>rev_left_front_wheel</left_joint>
-			<wheel_separation>0.917913</wheel_separation>
-			<wheel_diameter>0.66</wheel_diameter> -->
+			<!-- Number of wheel pairs -->
+			<num_wheel_pairs> 2 </num_wheel_pairs>
 
-			<right_joint>rev_right_back_wheel</right_joint>
-			<!--<right_joint>rev_right_front_wheel</right_joint> -->
+			<!-- Front Wheels -->
+			<left_joint>rev_left_front_wheel</left_joint>
+			<right_joint>rev_right_front_wheel</right_joint>
+			
 			<wheel_separation>0.914</wheel_separation>
 			<wheel_diameter>0.694622</wheel_diameter>
+
+			<!-- Back Wheels -->
+			<left_joint>rev_left_back_wheel</left_joint>
+			<right_joint>rev_right_back_wheel</right_joint>
+			
+			<wheel_separation>0.914</wheel_separation>
+			<wheel_diameter>0.694622</wheel_diameter>
+
 
 		 	<!-- limits -->
 		 	<max_wheel_torque>100</max_wheel_torque>
 		 	<max_wheel_acceleration>40.0</max_wheel_acceleration>	
 			
-					 <!-- output -->
+			<!-- output -->
 			<publish_odom>true</publish_odom>
 			<publish_odom_tf>true</publish_odom_tf>
 			<publish_wheel_tf>true</publish_wheel_tf>
-			<update_rate>5</update_rate>
+			
 
-			<odometry_frame>odom</odometry_frame>
+			<odometry_frame>odom_demo</odometry_frame>
 			<robot_base_frame>rigid_body</robot_base_frame>	
+			
 		</plugin>
 	</model>
 </sdf>
