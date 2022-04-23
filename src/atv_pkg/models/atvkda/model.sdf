@@ -7,14 +7,14 @@
 			<pose frame="">-0.5509772858698141 -0.35921503762573787 0.4691281110478071 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>320</mass>
+				<mass>3</mass>
 				<inertia>
-					<ixx>18.858715450981506</ixx>
-					<ixy>-7.888659932657681</ixy>
-					<ixz>10.541788863708364</ixz>
-					<iyy>40.90969858369452</iyy>
-					<iyz>6.723583823903066</iyz>
-					<izz>40.08555494215648e</izz>
+					<ixx>1</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>1</iyy>
+					<iyz>0</iyz>
+					<izz>1</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_body_collision">
@@ -45,7 +45,7 @@
 			<pose frame="">0.149313570651654 0.10837677345109908 -0.0027835333140371534 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -103,7 +103,7 @@
 			<pose frame="">0.14931385014328322 -0.7921332073751959 -0.0027817838858620993 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -161,7 +161,7 @@
 			<pose frame="">-1.3496864291871955 0.10837677345106926 -0.0033596523819218326 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -219,7 +219,7 @@
 			<pose frame="">-1.3496861498881583 -0.792133207375183 -0.003357902953795265 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -279,7 +279,7 @@
 			<pose frame=''>0.235 -0.34 0.85933 0 0 0</pose>
 			<inertial>
 				<pose frame=''>0 0 0 0 0 0</pose>
-				<mass>2</mass>
+				<mass>0.2</mass>
 				<inertia>
 					<ixx>3.23643</ixx>
 					<ixy>0.0156863</ixy>
@@ -428,7 +428,7 @@
 				</geometry>
 			</visual>
 		
-			<sensor name="imu" type="imu">
+			<sensor name="my_imu" type="imu">
 				<imu>
 				<angular_velocity>
 				<x>
@@ -486,7 +486,7 @@
 				<always_on>true</always_on>
 				<!-- Publish at 30 hz -->
 				<update_rate>30</update_rate>
-				<plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+				<plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
 					<ros>
 						<!-- Will publish to /imu/data -->
 						<namespace>/imu</namespace>
