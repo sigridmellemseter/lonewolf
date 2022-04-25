@@ -7,14 +7,14 @@
 			<pose frame="">-0.5509772858698141 -0.35921503762573787 0.4691281110478071 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>320</mass>
+				<mass>3</mass>
 				<inertia>
-					<ixx>1885.8715450981506</ixx>
-					<ixy>-788.8659932657681</ixy>
-					<ixz>1054.1788863708364</ixz>
-					<iyy>4090.969858369452</iyy>
-					<iyz>672.3583823903066</iyz>
-					<izz>4008.555494215648</izz>
+					<ixx>1</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>1</iyy>
+					<iyz>0</iyz>
+					<izz>1</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_body_collision">
@@ -45,7 +45,7 @@
 			<pose frame="">0.149313570651654 0.10837677345109908 -0.0027835333140371534 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -103,7 +103,7 @@
 			<pose frame="">0.14931385014328322 -0.7921332073751959 -0.0027817838858620993 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -161,7 +161,7 @@
 			<pose frame="">-1.3496864291871955 0.10837677345106926 -0.0033596523819218326 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -219,7 +219,7 @@
 			<pose frame="">-1.3496861498881583 -0.792133207375183 -0.003357902953795265 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>10</mass>
+				<mass>1</mass>
 				<inertia>
 					<ixx>0.3</ixx>
 					<ixy>0</ixy>
@@ -279,7 +279,7 @@
 			<pose frame=''>0.235 -0.34 0.85933 0 0 0</pose>
 			<inertial>
 				<pose frame=''>0 0 0 0 0 0</pose>
-				<mass>2</mass>
+				<mass>0.2</mass>
 				<inertia>
 					<ixx>3.23643</ixx>
 					<ixy>0.0156863</ixy>
@@ -390,8 +390,9 @@
 					<frameName>/velodyne</frameName>
 					<min_range>0.9</min_range>
 					<max_range>130</max_range>
-					<gaussianNoise>0.008</gaussianNoise>
-					<robotNamespace>/</robotNamespace>
+					<gaussian_noise>0.008</gaussian_noise>
+					<robotNamespace></robotNamespace>
+					<organize_cloud>false</organize_cloud>
 					
 					<output_type>sensor_msgs/PointCloud</output_type> 
 				</plugin>
@@ -408,16 +409,8 @@
 	 	<link name="imu">
 			<pose frame=''>0.235 -0.34 0.95933 0 0 0</pose>
 			<inertial>
-				<pose frame=''>0 0 0 0 0 0</pose>
+				<!--<pose frame=''>0 0 0 0 0 0</pose>--> 
 				<mass>0.1</mass>
-				<inertia>
-					<ixx>3.23643</ixx>
-					<ixy>0.0156863</ixy>
-					<ixz>0.065702</ixz>
-					<iyy>3.35996</iyy>
-					<iyz>-0.00821275</iyz>
-					<izz>3.32745</izz>
-				</inertia>
 			</inertial>
 			<collision name="imu_collision">
 				<pose frame=''>0 0 0 0 0 0 </pose>
@@ -436,18 +429,70 @@
 			</visual>
 		
 			<sensor name="my_imu" type="imu">
+				<imu>
+				<angular_velocity>
+				<x>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>2e-4</stddev>
+					<bias_mean>0.0000075</bias_mean>
+					<bias_stddev>0.0000008</bias_stddev>
+					</noise>
+				</x>
+				<y>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>2e-4</stddev>
+					<bias_mean>0.0000075</bias_mean>
+					<bias_stddev>0.0000008</bias_stddev>
+					</noise>
+				</y>
+				<z>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>2e-4</stddev>
+					<bias_mean>0.0000075</bias_mean>
+					<bias_stddev>0.0000008</bias_stddev>
+					</noise>
+				</z>
+				</angular_velocity>
+				<linear_acceleration>
+				<x>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>1.7e-2</stddev>
+					<bias_mean>0.1</bias_mean>
+					<bias_stddev>0.001</bias_stddev>
+					</noise>
+				</x>
+				<y>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>1.7e-2</stddev>
+					<bias_mean>0.1</bias_mean>
+					<bias_stddev>0.001</bias_stddev>
+					</noise>
+				</y>
+				<z>
+					<noise type="gaussian">
+					<mean>0.0</mean>
+					<stddev>1.7e-2</stddev>
+					<bias_mean>0.1</bias_mean>
+					<bias_stddev>0.001</bias_stddev>
+					</noise>
+				</z>
+				</linear_acceleration>
+				</imu>
 				<always_on>true</always_on>
 				<!-- Publish at 30 hz -->
 				<update_rate>30</update_rate>
-				<plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+				<plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
 					<ros>
 						<!-- Will publish to /imu/data -->
 						<namespace>/imu</namespace>
-						<remapping>~/out:=data</remapping>
+						<remapping>/out:=data</remapping>
 					</ros>
 				<!-- frame_name ommited, will be "my_link" -->
-				<output_type>sensor_msgs/Imu</output_type> 
-
 				</plugin>
 			</sensor>
 			<gravity>0</gravity>
@@ -516,11 +561,11 @@
 		<plugin name='skid_steer_drive' filename='libgazebo_ros_diff_drive.so'>
 			<ros>
 				<!-- Set namespace -->
-				<namespace> /demo </namespace>
+				<namespace>  </namespace>
 
 				<!-- Remap default topics -->
-				<argument>cmd_vel:=cmd_demo</argument>
-				<argument>odom:=odom_demo</argument>
+				<!-- <argument>cmd_vel:=cmd_demo</argument>-->
+				<!-- <argument>odom:=odom_demo</argument>-->
 			</ros>
 
 			<update_rate>500</update_rate>
