@@ -17,6 +17,7 @@ Demo for spawn_entity.
 Launches Gazebo and spawns a model
 """
 # A bunch of software packages that are needed to launch ROS2
+from http.server import executable
 import os
 from glob import glob
 from ament_index_python.packages import get_package_share_directory
@@ -64,12 +65,25 @@ def generate_launch_description():
     #                    arguments=['-entity', 'demo', 'x', 'y', 'z'],
     #                    output='screen')
     spawn_entity = Node(package='atv_pkg', executable='atv_node',
-                        arguments=['atvkda', 'demo', '0', '0', '1'],
+                        arguments=['atvkda', '', '0', '0', '1'],
                         output='screen')
+    
+   # forward_point_cloud_to_slam = Node(
+   #     package='atv_pkg',
+   #     executable='atv_node',
+   #     name='atv_node',
+   #     remappings=[
+   #         ('/demo/gazebo_ros_laser_controller/out', '/velodyne_points'),
+   #         ('/demo/imu_plugin/out', '/imu' ),
+   #     ]
+   # )
 
     return LaunchDescription([
         #joint_state_publisher_node, 
         #robot_state_publisher_node, 
         gazebo,
         spawn_entity,
+    #    forward_point_cloud_to_slam,
     ])
+
+    
