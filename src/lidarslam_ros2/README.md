@@ -4,6 +4,8 @@ lidarslam_ros2
 ![foxy](https://github.com/rsasaki0109/lidarslam_ros2/workflows/foxy/badge.svg)  
 ros2 slam package of the frontend using OpenMP-boosted gicp/ndt scan matching and the backend using graph-based slam. 
 
+This package is cloned and alternated from https://github.com/rsasaki0109/lidarslam_ros2.
+
 mobile robot mapping  
 <img src="./lidarslam/images/path_tukuba.png" width="640px">
 
