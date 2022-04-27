@@ -2,8 +2,7 @@
 <?xml-model href="http://sdformat.org/schemas/root.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <sdf version="1.5">
   <world name="default">
-    <!-- <plugin name="mrs_gazebo_link_attacher_plugin" filename="libMRSGazeboLinkAttacherPlugin.so"/> -->
-    <plugin name="mrs_gazebo_static_transform_republisher_plugin" filename="libMRSGazeboStaticTransformRepublisher.so"/>
+    <!-- <plugin name="mrs_gazebo_link_attacher_plugin" filename="libMRSGazeboLinkAttacherPlugin.so"/> --> 
 
     <!-- coordinate system {-->
     <spherical_coordinates>
@@ -29091,7 +29090,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/scripts/Gazebo.material</uri>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
               <name>Gazebo/Grass</name>
             </script>
           </material>
@@ -29103,14 +29102,6 @@
         <pose>-60 -100 30 0 0.4 0.89</pose>
       </camera>
     </gui>
-
-    <!-- GUI frame synchronization {-->
-    <plugin name="mrs_gazebo_rviz_cam_synchronizer" filename="libMRSGazeboRvizCameraSynchronizer.so" >
-      <target_frame_id>gazebo_user_camera</target_frame_id>
-      <world_origin_frame_id>uav1/gps_origin</world_origin_frame_id>
-      <frame_to_follow>uav1::base_link</frame_to_follow>
-    </plugin>
-    <!--}-->
  
   </world>
 </sdf>
