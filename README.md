@@ -4,12 +4,14 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
 ## Prerequisites
 - ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
 - You have installed the required packages: 
-```
-sudo apt install ros-foxy-gazebo-ros-pkgs
-sudo apt install ros-foxy-velodyne 
-sudo apt install ros-foxy-teleop-twist-keyboard
-sudo apt install ros-foxy
-```
+  - https://github.com/RainerKuemmerle/g2o
+ 
+    ```
+    sudo apt install ros-foxy-gazebo-ros-pkgs
+    sudo apt install ros-foxy-velodyne 
+    sudo apt install ros-foxy-teleop-twist-keyboard
+    sudo apt install ros-foxy
+    ```
 
 ### How to open point cloud in rviz: 
 Launch the simualor:
