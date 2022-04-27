@@ -1,12 +1,20 @@
 # lonewolf
 Repository for the bachelor thesis: ROS simulated world for ATV and finding optimal SLAM algorithm for generated point cloud
 
+## Prerequisites
+- ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
+- You have installed the required packages: 
+  - https://github.com/RainerKuemmerle/g2o
+ 
+    ```
+    sudo apt install ros-foxy-gazebo-ros-pkgs
+    sudo apt install ros-foxy-velodyne 
+    sudo apt install ros-foxy-teleop-twist-keyboard
+    sudo apt install ros-foxy
+    ```
+
 ### How to open point cloud in rviz: 
-Make sure you have the Velodyne package for foxy installed: 
-```
-sudo apt-get install ros-foxy-velodyne 
-```
-Then launch the simualor:
+Launch the simualor:
 ```
 ros2 launch atv_pkg atv_world.launch.py
 ```
@@ -24,3 +32,5 @@ Now you have to add the PointCloud2 in rviz:
 - Choose PointCloud2 under /demo/gazebo_ros_laser_controller/out 
 
 Now you should see the point cloud in rviz. To get a better visual choose the Style "Points" and set Color Transformer to "AxisColor"
+
+
