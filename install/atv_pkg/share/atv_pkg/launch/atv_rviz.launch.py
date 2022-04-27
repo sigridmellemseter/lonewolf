@@ -1,2 +1,0 @@
-## Launch file for RViz
-
