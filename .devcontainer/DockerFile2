@@ -101,6 +101,13 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=
 
+# install the required packages for sim
+# RUN apt-get update && apt-get install -y \
+#   ros-foxy-velodyne \
+#   && ros-foxy-teleop-twist-keyboard \ 
+#   && rm -rf /var/lib/apt/lists/*
+# ENV DEBIAN_FRONTEND=
+
 ###########################################
 #  Full+Gazebo image 
 ###########################################
@@ -110,6 +117,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install gazebo
 RUN apt-get update && apt-get install -y \
   ros-foxy-gazebo* \
+  #&& ros-foxy-gazebo-ros-pkgs \
   && rm -rf /var/lib/apt/lists/*
 ENV DEBIAN_FRONTEND=
 
