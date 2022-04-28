@@ -1,4 +1,5 @@
 # Docker
+The DockerFiles in this project is intended for being able to run ROS2 Foxy on the NVIDIA AGX Xavier. The AGX runs on JetPack, that currently only supports Ubuntu 18.04. When JetPack 5 is released later in 2022, it will not be necessary to run ROS2 through Docker.
 
 ## Installation
   ```
