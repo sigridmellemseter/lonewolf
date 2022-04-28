@@ -23,7 +23,7 @@ development with docker, we recommend you do this.
 2. Script to build the file???
 3. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
 The image should now start building.
-4. Once inside the container you can start by building the pipeline. Use `CTRL+SHIFT+B`, or enter colcon build (???)
+4. Once inside the container you can start by building the pipeline by using `colcon build` 
 
 
 
@@ -33,4 +33,4 @@ The image should now start building.
  your computer when this username is the one you set and the computer name is also the one you set. You are
  inside the container if the user name is `tbd`, and the computer name is a bunch of letters and numbers.
  
-- **Q:** How to enter the Docker container? **A:** 
+- **Q:** How to enter the Docker container? **A:** You can enter the Docker container by using the command `code lonewolf`. When you are in VSCode, you have to open the container by doing `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`. The image should now start building. After the image is built, open a terminal in VSCode and you are inside the container.
