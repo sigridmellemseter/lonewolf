@@ -22,7 +22,7 @@ development with docker, we recommend you do this.
 1. Install Visual Studio Code on your host computer. Then download the `Remote - Containers`-extension
 2. Script to build the file???
 3. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
-The image should now start building.
+The image should now start building. This might take a while.
 4. Once inside the container you can start by building the pipeline by using `colcon build` 
 
 
@@ -34,3 +34,4 @@ The image should now start building.
  inside the container if the user name is `tbd`, and the computer name is a bunch of letters and numbers.
  
 - **Q:** How to enter the Docker container? **A:** You can enter the Docker container by using the command `code lonewolf`. When you are in VSCode, you have to open the container by doing `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`. The image should now start building. After the first time you have done this, you should get a notification in the bottom right corner of VSCode that asks you if you want to open the workspace in a Remote Container. After the image is built, open a terminal in VSCode and you are inside the container. 
+- **Q:** What is the DockerFile based on? **A:** The DockerFile is based on the `althack/ros2:foxy-gazebo-nvidia` Docker image, but has added dependencies necessary for running SLAM. 
