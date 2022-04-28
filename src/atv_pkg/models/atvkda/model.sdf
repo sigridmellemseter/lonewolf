@@ -362,7 +362,7 @@
 				<ray>
 					<scan>
 						<horizontal>
-							<samples>1875</samples>
+							<samples>100</samples>
 							<resolution>1</resolution>
 							<min_angle>-3.14159</min_angle>
 							<max_angle>3.14159</max_angle>
@@ -609,8 +609,8 @@
 			<publish_odom_tf>true</publish_odom_tf>
 			<publish_wheel_tf>true</publish_wheel_tf>
 			
-
-			<odometry_frame>odom_demo</odometry_frame>
+			<odometry_topic>odom</odometry_topic>
+			<odometry_frame>odom</odometry_frame>
 			<robot_base_frame>rigid_body</robot_base_frame>	
 			
 		</plugin>
