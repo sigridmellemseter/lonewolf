@@ -362,7 +362,7 @@
 				<ray>
 					<scan>
 						<horizontal>
-							<samples>1875</samples>
+							<samples>100</samples>
 							<resolution>1</resolution>
 							<min_angle>-3.14159</min_angle>
 							<max_angle>3.14159</max_angle>
@@ -392,7 +392,7 @@
 						<argument>~/out:=velodyne_points</argument>
 					</ros>
 					<!-- <topic_name>/velodyne_points</topic_name>-->
-					<!-- <frame_name>/velodyne</frame_name>-->
+					<frame_name>velodyne</frame_name>
 					<min_range>0.9</min_range>
 					<max_range>13</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
@@ -402,6 +402,13 @@
 					<output_type>sensor_msgs/PointCloud</output_type> 
 				</plugin>
 				<pose frame=''>0 0 0 0 0 0</pose>
+				<plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+     					 <ros>
+        					<remapping>~/out:=scan</remapping>
+      					</ros>
+      					<output_type>sensor_msgs/LaserScan</output_type>
+      					<frame_name>velodyne</frame_name>
+    				</plugin>
 			</sensor>
 			<gravity>0</gravity>
 			<self_collide>0</self_collide>
@@ -602,8 +609,8 @@
 			<publish_odom_tf>true</publish_odom_tf>
 			<publish_wheel_tf>true</publish_wheel_tf>
 			
-
-			<odometry_frame>odom_demo</odometry_frame>
+			<odometry_topic>odom</odometry_topic>
+			<odometry_frame>odom</odometry_frame>
 			<robot_base_frame>rigid_body</robot_base_frame>	
 			
 		</plugin>
