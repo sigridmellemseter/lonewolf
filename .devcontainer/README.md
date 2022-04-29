@@ -1,5 +1,5 @@
 # Docker
-The DockerFiles in this project is intended for being able to run ROS2 Foxy on the NVIDIA AGX Xavier. The AGX runs on JetPack, that currently only supports Ubuntu 18.04. When JetPack 5 is released later in 2022, it will not be necessary to run ROS2 through Docker.
+The DockerFiles in this project is intended for being able to run ROS2 Foxy on the NVIDIA AGX Xavier. The AGX runs on JetPack, that currently only supports Ubuntu 18.04. When JetPack 5 is released later in 2022, it will not be necessary to run ROS2 through Docker. 
 
 ## Installation
   ```
@@ -9,6 +9,11 @@ Install Docker
 - [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 - [macOS](https://docs.docker.com/desktop/mac/install/)
 - [Windows](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+The dependencies needed (g20 and ceres) needs to be donwloaded and built in accordance to this guide *guide will follow*
+
+- add steps needed to have a working pipeline inside the docker container
+
 
 Note:
 
@@ -31,8 +36,7 @@ The image should now start building. This might take a while.
 ## Docker container FAQ
 - **Q:** What does it mean to be *inside* the docker container? **A:** When you open the terminal, you will see a
  signature next to your cursor: `<your_username>@<your_computer_name>:~$`.ou are in the command line locally on
- your computer when this username is the one you set and the computer name is also the one you set. You are
- inside the container if the user name is `tbd`, and the computer name is a bunch of letters and numbers.
+ your computer when this username is the one you set and the computer name is also the one you set.
  
 - **Q:** How to enter the Docker container? **A:** You can enter the Docker container by using the command `code lonewolf`. When you are in VSCode, you have to open the container by doing `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`. The image should now start building. After the first time you have done this, you should get a notification in the bottom right corner of VSCode that asks you if you want to open the workspace in a Remote Container. After the image is built, open a terminal in VSCode and you are inside the container. 
 - **Q:** What is the DockerFile based on? **A:** The DockerFile is based on the `althack/ros2:foxy-gazebo-nvidia` Docker image, but has added dependencies necessary for running SLAM. 
