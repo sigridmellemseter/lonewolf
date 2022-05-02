@@ -10,11 +10,6 @@ Install Docker
 - [macOS](https://docs.docker.com/desktop/mac/install/)
 - [Windows](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
-The dependencies needed (g20 and ceres) needs to be donwloaded and built in accordance to this guide *guide will follow*
-
-- add steps needed to have a working pipeline inside the docker container
-
-
 Note:
 
 If you are using Ubuntu, remember to add docker to the admin group so you don't have to add sudo 
@@ -25,11 +20,33 @@ this, remember to log out and back in (or just reboot), because the change only 
 ## Setting up development with VSCode
 If you are new to ubuntu/linux, or don't already have any other specific plan on how you want to set up 
 development with docker, we recommend you do this.
-1. Install Visual Studio Code on your host computer. Then download the `Remote - Containers`-extension
-2. Script to build the file???
-3. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
-The image should now start building. This might take a while.
-4. Once inside the container you can start by building the pipeline by using `colcon build` 
+1. Download the repo with the command in your terminal
+  ```
+  git clone git@github.com:sigridmellemseter/lonewolf.git
+   ```
+2. Install Visual Studio Code on your host computer. Then download the `Remote - Containers`-extension
+4. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
+he image should now start building. This might take a while.
+5. Open a terminal in VSCode and download and build g2o with this commands in the lonewolf directory (this takes a while):
+ ```
+  git clone git@github.com:RainerKuemmerle/g2o.git
+  mkdir build
+  cd build
+  cmake ../
+  make
+   ```
+6. Install and build Ceres Solver with these commands:
+ ```
+ git clone https://ceres-solver.googlesource.com/ceres-solver
+ tar zxf ceres-solver-2.1.0.tar.gz
+ mkdir ceres-bin
+ cd ceres-bin
+ cmake ../ceres-solver-2.1.0
+ make -j3
+ make test
+ make install
+   ```
+7. You can now start developing by building the pipeline by using `colcon build` 
 
 
 
