@@ -36,18 +36,25 @@ he image should now start building. This might take a while.
   cmake ../
   make
    ```
-6. Install and build Ceres Solver with these commands:
+5. Open a terminal in VSCode and install and build Ceres Solver with these commands:
  ```
  git clone https://ceres-solver.googlesource.com/ceres-solver
  cd ceres-solver
- tar zxf ceres-solver-2.1.0.tar.gz
  mkdir ceres-bin
  cd ceres-bin
- cmake ../ceres-solver-2.1.0
+ cmake ../
  make -j3
  make test
  make install
    ```
+6. Install and build g2o with this commands in the lonewolf directory :
+ ```
+  git clone git@github.com:RainerKuemmerle/g2o.git
+  cd g20
+  mkdir build
+  cd build
+  cmake ../
+  make
 7. You can now start developing by building the pipeline by using `colcon build` 
 
 
