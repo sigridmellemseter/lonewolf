@@ -55,6 +55,7 @@ he image should now start building. This might take a while.
   cd build
   cmake ../
   make
+   ```
 7. You can now start developing by building the pipeline by using `colcon build` 
 
 
