@@ -10,7 +10,8 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
     sudo apt install ros-foxy-gazebo-ros-pkgs
     sudo apt install ros-foxy-velodyne 
     sudo apt install ros-foxy-teleop-twist-keyboard
-    sudo apt install ros-foxy
+    sudo apt install ros-foxy-ros2-control
+    sudo apt install ros-foxy-ros2-controllers
     ```
 
 ### How to open point cloud in rviz: 
