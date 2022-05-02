@@ -1,0 +1,10 @@
+version: '1'
+
+services:
+  ros2-atvsim:
+    build: 
+      context: .
+      dockerfile: DockerFile
+    image: lonewolf/ros2-atvsim:v1
+    container_name: ros2-atvsim
+
