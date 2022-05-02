@@ -371,12 +371,12 @@
 							<samples>16</samples>
 							<resolution>1</resolution>
 							<min_angle>-0.261799</min_angle>
-							<max_angle>0.261799</max_angle>
+							<max_angle>0.5235987756</max_angle>
 						</vertical>
 					</scan>
 					<range>
 						<min>0.055</min>
-						<max>140</max>
+						<max>100</max>
 						<resolution>0.001</resolution>
 					</range>
 					<noise>
@@ -393,8 +393,8 @@
 					</ros>
 					<!-- <topic_name>/velodyne_points</topic_name>-->
 					<frame_name>velodyne</frame_name>
-					<min_range>0.9</min_range>
-					<max_range>13</max_range>
+					<min_range>0.055</min_range>
+					<max_range>100</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
 					<robotNamespace></robotNamespace>
 					<organize_cloud>false</organize_cloud>
