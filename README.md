@@ -1,6 +1,8 @@
 # lonewolf
 Repository for the bachelor thesis: ROS simulated world for ATV and finding optimal SLAM algorithm for generated point cloud
 
+**If you are running this on NVIDIA AGX Xavier, head over to the .devcontainer for the setup guide.**
+
 ## Prerequisites
 - ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
 - You have installed the required packages: 
