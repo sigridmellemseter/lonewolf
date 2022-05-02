@@ -7,7 +7,7 @@
 			<pose frame="">-0.5509772858698141 -0.35921503762573787 0.4691281110478071 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>30</mass>
+				<mass>100</mass>
 				<inertia>
 					<ixx>1</ixx>
 					<ixy>1</ixy>
@@ -47,12 +47,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>1</mass>
 				<inertia>
-					<ixx>0.3</ixx>
-					<ixy>0</ixy>
-					<ixz>0</ixz>
-					<iyy>0.3</iyy>
-					<iyz>0</iyz>
-					<izz>0.6</izz>
+					<ixx>0.012411765597</ixx>
+					<ixy>-0.000711733678</ixy>
+					<ixz>0.00050272983</ixz>
+					<iyy>0.015218160428</iyy>
+					<iyz>-0.000004273467</iyz>
+					<izz>0.011763977943</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_front_wheel_collision">
@@ -105,12 +105,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>1</mass>
 				<inertia>
-					<ixx>0.3</ixx>
-					<ixy>0</ixy>
-					<ixz>0</ixz>
-					<iyy>0.3</iyy>
-					<iyz>0</iyz>
-					<izz>0.6</izz>
+					<ixx>0.012411765597</ixx>
+					<ixy>-0.000711733678</ixy>
+					<ixz>0.00050272983</ixz>
+					<iyy>0.015218160428</iyy>
+					<iyz>-0.000004273467</iyz>
+					<izz>0.011763977943</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_front_wheels_collision">
@@ -163,12 +163,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>1</mass>
 				<inertia>
-					<ixx>0.3</ixx>
-					<ixy>0</ixy>
-					<ixz>0</ixz>
-					<iyy>0.3</iyy>
-					<iyz>0</iyz>
-					<izz>0.6</izz>
+					<ixx>0.012411765597</ixx>
+					<ixy>-0.000711733678</ixy>
+					<ixz>0.00050272983</ixz>
+					<iyy>0.015218160428</iyy>
+					<iyz>-0.000004273467</iyz>
+					<izz>0.011763977943</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_back_wheel_collision">
@@ -221,12 +221,12 @@
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
 				<mass>1</mass>
 				<inertia>
-					<ixx>0.3</ixx>
-					<ixy>0</ixy>
-					<ixz>0</ixz>
-					<iyy>0.3</iyy>
-					<iyz>0</iyz>
-					<izz>0.6</izz>
+					<ixx>0.012411765597</ixx>
+					<ixy>-0.000711733678</ixy>
+					<ixz>0.00050272983</ixz>
+					<iyy>0.015218160428</iyy>
+					<iyz>-0.000004273467</iyz>
+					<izz>0.011763977943</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_back_wheel_collision">
@@ -278,7 +278,7 @@
 		<link name='velodyne'>
 			<pose frame=''>0.235 -0.34 0.85933 0 0 0</pose>
 			<inertial>
-				<pose frame=''>0 0 0 0 0 0</pose>
+				<pose frame='map'>0 0 0 0 0 0</pose>
 				<mass>0.2</mass>
 				<inertia>
 					<ixx>3.23643</ixx>
@@ -394,7 +394,7 @@
 					<!-- <topic_name>/velodyne_points</topic_name>-->
 					<frame_name>velodyne</frame_name>
 					<min_range>0.055</min_range>
-					<max_range>100</max_range>
+					<max_range>13</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
 					<robotNamespace></robotNamespace>
 					<organize_cloud>false</organize_cloud>
@@ -602,7 +602,7 @@
 
 		 	<!-- limits -->
 		 	<max_wheel_torque>100</max_wheel_torque>
-		 	<max_wheel_acceleration>40.0</max_wheel_acceleration>	
+		 	<max_wheel_acceleration>100</max_wheel_acceleration>	
 			
 			<!-- output -->
 			<publish_odom>true</publish_odom>
