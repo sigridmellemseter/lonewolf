@@ -30,6 +30,7 @@ he image should now start building. This might take a while.
 5. Open a terminal in VSCode and download and build g2o with this commands in the lonewolf directory (this takes a while):
  ```
   git clone git@github.com:RainerKuemmerle/g2o.git
+  cd g20
   mkdir build
   cd build
   cmake ../
@@ -38,6 +39,7 @@ he image should now start building. This might take a while.
 6. Install and build Ceres Solver with these commands:
  ```
  git clone https://ceres-solver.googlesource.com/ceres-solver
+ cd ceres-solver
  tar zxf ceres-solver-2.1.0.tar.gz
  mkdir ceres-bin
  cd ceres-bin
