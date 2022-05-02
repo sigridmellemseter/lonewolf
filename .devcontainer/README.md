@@ -25,18 +25,9 @@ development with docker, we recommend you do this.
   git clone git@github.com:sigridmellemseter/lonewolf.git
    ```
 2. Install Visual Studio Code on your host computer. Then download the `Remote - Containers`-extension
-4. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
+3. To open the container in VSCode do `CTRL+SHIFT+P` and search for `Remote-Containers: Reopen in Container`.
 he image should now start building. This might take a while.
-5. Open a terminal in VSCode and download and build g2o with this commands in the lonewolf directory (this takes a while):
- ```
-  git clone git@github.com:RainerKuemmerle/g2o.git
-  cd g20
-  mkdir build
-  cd build
-  cmake ../
-  make
-   ```
-5. Open a terminal in VSCode and install and build Ceres Solver with these commands:
+4. Open a terminal in VSCode and install and build Ceres Solver with these commands:
  ```
  git clone https://ceres-solver.googlesource.com/ceres-solver
  cd ceres-solver
@@ -47,7 +38,7 @@ he image should now start building. This might take a while.
  make test
  make install
    ```
-6. Install and build g2o with this commands in the lonewolf directory :
+5. Install and build g2o with this commands in the lonewolf directory :
  ```
   git clone git@github.com:RainerKuemmerle/g2o.git
   cd g20
@@ -56,7 +47,7 @@ he image should now start building. This might take a while.
   cmake ../
   make
    ```
-7. You can now start developing by building the pipeline by using `colcon build` 
+6. You can now start developing by building the pipeline by using `colcon build` 
 
 
 
