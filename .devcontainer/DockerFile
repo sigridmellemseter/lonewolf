@@ -51,7 +51,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
   bash-completion \
   build-essential \
-  #necessary for running g2o
+  #necessary for running g2o and ceres
   cmake \
   libgoogle-glog-dev libgflags-dev \ 
   libatlas-base-dev \
@@ -60,10 +60,13 @@ RUN apt-get update && apt-get install -y \
   qtdeclarative5-dev \
   qt5-qmake \
   libqglviewer-dev-qt5 \
+
   ####
-  #required prerequisites
+  #required prerequisites for this project
   ros-velodyne \
   ros-foxy-teleop-twist-keyboard \
+  ros-foxy-ros2-control \
+  ros-foxy-ros2-controllers \
   ####
   gdb \
   git \
