@@ -2,12 +2,12 @@
 <sdf version="1.6">
 	<model name="atvkda">
 		<pose>0 0 0.35 0 -0 0</pose>
-		<link name="rigid_body">
+		<link name="base_link">
 			<self_collide>false</self_collide>
 			<pose frame="">-0.5509772858698141 -0.35921503762573787 0.4691281110478071 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>100</mass>
+				<mass>30</mass>
 				<inertia>
 					<ixx>1</ixx>
 					<ixy>1</ixy>
@@ -17,7 +17,7 @@
 					<izz>1</izz>
 				</inertia>
 			</inertial>
-			<collision name="rigid_body_collision">
+			<collision name="base_link_collision">
 				<geometry>
 					<mesh>
 						<uri>model://atvkda/meshes/CAD/rigid_body.stl</uri>
@@ -25,7 +25,7 @@
 					</mesh>
 				</geometry>
 			</collision>
-			<visual name="rigid_body_visual">
+			<visual name="base_link_visual">
 				<geometry>
 					<mesh>
 						<uri>model://atvkda/meshes/CAD/rigid_body.stl</uri>
@@ -45,14 +45,14 @@
 			<pose frame="">0.149313570651654 0.10837677345109908 -0.0027835333140371534 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1</mass>
+				<mass>5</mass>
 				<inertia>
-					<ixx>0.012411765597</ixx>
-					<ixy>-0.000711733678</ixy>
-					<ixz>0.00050272983</ixz>
-					<iyy>0.015218160428</iyy>
-					<iyz>-0.000004273467</iyz>
-					<izz>0.011763977943</izz>
+					<ixx>0.0125</ixx>
+					<ixy>0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0125</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.05</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_front_wheel_collision">
@@ -66,9 +66,9 @@
 					<friction>
 						<ode>
 							<mu>0.6</mu>
-							<mu2>0.6</mu2>
-							<slip1>0.1</slip1>
-							<slip2>0.1</slip2>
+							<mu2></mu2>
+							<slip1>0.01</slip1>
+							<slip2>0.01</slip2>
 						</ode>
 					</friction>
 					<contact>
@@ -78,7 +78,7 @@
 							<kp>1e+13</kp>
 							<kd>1</kd>
 							<max_vel>0.01</max_vel>
-							<min_depth>0.01</min_depth>
+							<min_depth>0.5</min_depth>
 						</ode>
 					</contact>
 				</surface>
@@ -103,14 +103,14 @@
 			<pose frame="">0.14931385014328322 -0.7921332073751959 -0.0027817838858620993 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1</mass>
+				<mass>5</mass>
 				<inertia>
-					<ixx>0.012411765597</ixx>
-					<ixy>-0.000711733678</ixy>
-					<ixz>0.00050272983</ixz>
-					<iyy>0.015218160428</iyy>
-					<iyz>-0.000004273467</iyz>
-					<izz>0.011763977943</izz>
+					<ixx>0.0125</ixx>
+					<ixy>0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0125</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.05</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_front_wheels_collision">
@@ -124,9 +124,9 @@
 					<friction>
 						<ode>
 							<mu>0.6</mu>
-							<mu2>0.6</mu2>
-							<slip1>0</slip1>
-							<slip2>0</slip2>
+							<mu2></mu2>
+							<slip1>0.01</slip1>
+							<slip2>0.01</slip2>
 						</ode>
 					</friction>
 					<contact>
@@ -136,7 +136,7 @@
 							<kp>1e+13</kp>
 							<kd>1</kd>
 							<max_vel>0.01</max_vel>
-							<min_depth>0.01</min_depth>
+							<min_depth>0.5</min_depth>
 						</ode>
 					</contact>
 				</surface>
@@ -161,14 +161,14 @@
 			<pose frame="">-1.3496864291871955 0.10837677345106926 -0.0033596523819218326 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1</mass>
+				<mass>5</mass>
 				<inertia>
-					<ixx>0.012411765597</ixx>
-					<ixy>-0.000711733678</ixy>
-					<ixz>0.00050272983</ixz>
-					<iyy>0.015218160428</iyy>
-					<iyz>-0.000004273467</iyz>
-					<izz>0.011763977943</izz>
+					<ixx>0.0125</ixx>
+					<ixy>0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0125</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.05</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_left_back_wheel_collision">
@@ -182,9 +182,9 @@
 					<friction>
 						<ode>
 							<mu>0.6</mu>
-							<mu2>0.6</mu2>
-							<slip1>0</slip1>
-							<slip2>0</slip2>
+							<mu2></mu2>
+							<slip1>0.01</slip1>
+							<slip2>0.01</slip2>
 						</ode>
 					</friction>
 					<contact>
@@ -194,7 +194,7 @@
 							<kp>1e+13</kp>
 							<kd>1</kd>
 							<max_vel>0.01</max_vel>
-							<min_depth>0.01</min_depth>
+							<min_depth>0.5</min_depth>
 						</ode>
 					</contact>
 				</surface>
@@ -219,14 +219,14 @@
 			<pose frame="">-1.3496861498881583 -0.792133207375183 -0.003357902953795265 0.0 -0.0 0.0</pose>
 			<inertial>
 				<pose frame="">0.0 0.0 0.0 0 0 0</pose>
-				<mass>1</mass>
+				<mass>5</mass>
 				<inertia>
-					<ixx>0.012411765597</ixx>
-					<ixy>-0.000711733678</ixy>
-					<ixz>0.00050272983</ixz>
-					<iyy>0.015218160428</iyy>
-					<iyz>-0.000004273467</iyz>
-					<izz>0.011763977943</izz>
+					<ixx>0.0125</ixx>
+					<ixy>0</ixy>
+					<ixz>0.0</ixz>
+					<iyy>0.0125</iyy>
+					<iyz>0.0</iyz>
+					<izz>0.05</izz>
 				</inertia>
 			</inertial>
 			<collision name="rigid_right_back_wheel_collision">
@@ -240,9 +240,9 @@
 					<friction>
 						<ode>
 							<mu>0.6</mu>
-							<mu2>0.6</mu2>
-							<slip1>0</slip1>
-							<slip2>0</slip2>
+							<mu2></mu2>
+							<slip1>0.01</slip1>
+							<slip2>0.01</slip2>
 						</ode>
 					</friction>
 					<contact>
@@ -252,7 +252,7 @@
 							<kp>1e+13</kp>
 							<kd>1</kd>
 							<max_vel>0.01</max_vel>
-							<min_depth>0.01</min_depth>
+							<min_depth>0.5</min_depth>
 						</ode>
 					</contact>
 				</surface>
@@ -281,12 +281,12 @@
 				<pose frame='map'>0 0 0 0 0 0</pose>
 				<mass>0.2</mass>
 				<inertia>
-					<ixx>3.23643</ixx>
-					<ixy>0.0156863</ixy>
-					<ixz>0.065702</ixz>
-					<iyy>3.35996</iyy>
-					<iyz>-0.00821275</iyz>
-					<izz>3.32745</izz>
+					<ixx>0.01</ixx>
+					<ixy>0.01</ixy>
+					<ixz>0.01</ixz>
+					<iyy>0.01</iyy>
+					<iyz>-0.01</iyz>
+					<izz>0.01</izz>
 				</inertia>
 			</inertial>
 			<collision name='base_footprint_collision_1'>
@@ -358,11 +358,11 @@
 			</visual>
 			<sensor name='velodyne-VLP16' type='ray'>
 				<visualize>0</visualize>
-				<update_rate>3</update_rate>
+				<update_rate>10</update_rate>
 				<ray>
 					<scan>
 						<horizontal>
-							<samples>100</samples>
+							<samples>150</samples>
 							<resolution>1</resolution>
 							<min_angle>-3.14159</min_angle>
 							<max_angle>3.14159</max_angle>
@@ -371,12 +371,12 @@
 							<samples>16</samples>
 							<resolution>1</resolution>
 							<min_angle>-0.261799</min_angle>
-							<max_angle>0.5235987756</max_angle>
+							<max_angle>0.261799</max_angle>
 						</vertical>
 					</scan>
 					<range>
 						<min>0.055</min>
-						<max>100</max>
+						<max>10</max>
 						<resolution>0.001</resolution>
 					</range>
 					<noise>
@@ -393,22 +393,15 @@
 					</ros>
 					<!-- <topic_name>/velodyne_points</topic_name>-->
 					<frame_name>velodyne</frame_name>
-					<min_range>0.055</min_range>
-					<max_range>13</max_range>
+					<min_range>0.9</min_range>
+					<max_range>10</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
 					<robotNamespace></robotNamespace>
 					<organize_cloud>false</organize_cloud>
 					
-					<output_type>sensor_msgs/PointCloud</output_type> 
+					<output_type>sensor_msgs/PointCloud2</output_type> 
 				</plugin>
 				<pose frame=''>0 0 0 0 0 0</pose>
-				<plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
-     					 <ros>
-        					<remapping>~/out:=scan</remapping>
-      					</ros>
-      					<output_type>sensor_msgs/LaserScan</output_type>
-      					<frame_name>velodyne</frame_name>
-    				</plugin>
 			</sensor>
 			<gravity>0</gravity>
 			<self_collide>0</self_collide>
@@ -423,6 +416,14 @@
 			<inertial>
 				<!--<pose frame=''>0 0 0 0 0 0</pose>--> 
 				<mass>0.1</mass>
+				<inertia>
+					<ixx>0.01</ixx>
+					<ixy>0.01</ixy>
+					<ixz>0.01</ixz>
+					<iyy>0.01</iyy>
+					<iyz>-0.01</iyz>
+					<izz>0.01</izz>
+				</inertia>
 			</inertial>
 			<collision name="imu_collision">
 				<pose frame=''>0 0 0 0 0 0 </pose>
@@ -519,19 +520,19 @@
 
 	<!-- ****************************** Joints **********************************   -->
 		<joint name="imu_joint" type="fixed">
-    			<parent>rigid_body</parent>
+    			<parent>base_link</parent>
     			<child>imu</child>
     			<pose>>0 0 0 0 0 0</pose>
   		</joint>
 
 		<joint name="lidar_joint" type="fixed">
-    			<parent>rigid_body</parent>
+    			<parent>base_link</parent>
     			<child>velodyne</child>
     			<pose>>0 0 0 0 0 0</pose>
   		</joint>
 
 		<joint name="rev_right_back_wheel" type="revolute">
-			<parent>rigid_body</parent>
+			<parent>base_link</parent>
 			<child>rigid_right_back_wheel</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
@@ -540,7 +541,7 @@
 			</axis>
 		</joint>
 		<joint name="rev_left_back_wheel" type="revolute">
-			<parent>rigid_body</parent>
+			<parent>base_link</parent>
 			<child>rigid_left_back_wheel</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
@@ -549,7 +550,7 @@
 			</axis>
 		</joint>
 		<joint name="rev_left_front_wheel" type="revolute">
-			<parent>rigid_body</parent>
+			<parent>base_link</parent>
 			<child>rigid_left_front_wheel</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
@@ -558,7 +559,7 @@
 			</axis>
 		</joint>
 		<joint name="rev_right_front_wheel" type="revolute">
-			<parent>rigid_body</parent>
+			<parent>base_link</parent>
 			<child>rigid_right_front_wheels</child>
 			<pose frame="">0 0 0 0 0 0</pose>
 			<axis>
@@ -612,7 +613,7 @@
 			
 			<odometry_topic>odom</odometry_topic>
 			<odometry_frame>odom</odometry_frame>
-			<robot_base_frame>rigid_body</robot_base_frame>	
+			<robot_base_frame>base_link</robot_base_frame>	
 			
 		</plugin>
 	</model>
