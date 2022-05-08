@@ -6,6 +6,7 @@ The DockerFiles in this project is intended for being able to run ROS2 Foxy on t
   sudo apt update
   ```
 Install Docker
+- [NVIDIA](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 - [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 - [macOS](https://docs.docker.com/desktop/mac/install/)
 - [Windows](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
