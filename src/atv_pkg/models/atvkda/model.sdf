@@ -362,7 +362,7 @@
 				<ray>
 					<scan>
 						<horizontal>
-							<samples>150</samples>
+							<samples>170</samples>
 							<resolution>1</resolution>
 							<min_angle>-3.14159</min_angle>
 							<max_angle>3.14159</max_angle>
@@ -376,7 +376,7 @@
 					</scan>
 					<range>
 						<min>0.055</min>
-						<max>10</max>
+						<max>30</max>
 						<resolution>0.001</resolution>
 					</range>
 					<noise>
@@ -389,12 +389,12 @@
 					<ros>
 						<!-- Will publish to /imu/data -->
 						<namespace></namespace>
-						<argument>~/out:=velodyne_points</argument>
+						<argument>~/out:=points_raw</argument>
 					</ros>
 					<!-- <topic_name>/velodyne_points</topic_name>-->
 					<frame_name>velodyne</frame_name>
 					<min_range>0.9</min_range>
-					<max_range>10</max_range>
+					<max_range>30</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
 					<robotNamespace></robotNamespace>
 					<organize_cloud>false</organize_cloud>
@@ -498,12 +498,19 @@
 				</imu>
 				<always_on>true</always_on>
 				<!-- Publish at 30 hz -->
-				<update_rate>3</update_rate>
-				<plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+				<update_rate>30</update_rate>
+				<plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+					<ros>
+						<argument>~/out:=imu</argument>
+					</ros>
+					<frame_name>map</frame_name>
+				<!-- frame_name ommited, will be "my_link" -->
+				</plugin>
+				<plugin name="correct_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
 					<ros>
 						<!-- Will publish to /imu/data -->
 						<namespace></namespace>
-						<argument>~/out:=imu</argument>
+						<argument>~/out:=imu_correct</argument>
 					</ros>
 					<frame_name>map</frame_name>
 				<!-- frame_name ommited, will be "my_link" -->
@@ -607,14 +614,14 @@
 		 	<max_wheel_acceleration>100</max_wheel_acceleration>	
 			
 			<!-- output -->
-			<publish_odom>true</publish_odom>
+			<publish_odom>false</publish_odom>
 			<publish_odom_tf>true</publish_odom_tf>
 			<publish_wheel_tf>true</publish_wheel_tf>
 			
+		
 			<odometry_topic>odom</odometry_topic>
 			<odometry_frame>odom</odometry_frame>
-			<robot_base_frame>base_link</robot_base_frame>	
-			
+			<robot_base_frame>base_link</robot_base_frame>
 		</plugin>
 	</model>
 </sdf>
