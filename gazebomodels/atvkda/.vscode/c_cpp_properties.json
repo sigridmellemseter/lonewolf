@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sigridmellemseter/lonewolf/install/scanmatcher/include/**",
+        "/home/sigridmellemseter/lonewolf/install/graph_based_slam/include/**",
+        "/home/sigridmellemseter/lonewolf/install/ndt_omp_ros2/include/**",
+        "/home/sigridmellemseter/lonewolf/install/lidarslam_msgs/include/**",
+        "/home/sigridmellemseter/lonewolf/install/imu_filter_madgwick/include/**",
+        "/home/sigridmellemseter/lonewolf/install/imu_complementary_filter/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/sigridmellemseter/lonewolf/src/imu_tools/imu_complementary_filter/include/**",
+        "/home/sigridmellemseter/lonewolf/src/imu_tools/imu_filter_madgwick/include/**",
+        "/home/sigridmellemseter/lonewolf/src/li_slam_ros2/Thirdparty/ndt_omp_ros2/include/**",
+        "/home/sigridmellemseter/lonewolf/src/li_slam_ros2/graph_based_slam/include/**",
+        "/home/sigridmellemseter/lonewolf/src/li_slam_ros2/scanmatcher/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
