@@ -86,6 +86,6 @@ To see the data more clearly, you can choose the following styles:
 - `/modified_map`: Flat Squares, Size (m) 0.03, Color Transformer to ? 
 - `/modified_path`: Color green
 
-![Map, path, modified map and modified path i Rviz2](/.images/SLAMcorrect.png "map from point cloud and SLAM")
+![Map, path, modified map and modified path i Rviz2](.images/SLAMcorrect.png "map from point cloud and SLAM")
 
 
