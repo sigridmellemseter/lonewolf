@@ -42,6 +42,9 @@ cd ~/ros2_ws
 source install/setup.bash
 ros2 launch atv_pkg car_world.launch.py
 ```
+You should now see the ATV and the world in Gazebo. 
+
+![Simulator in Gazebo](.images/gazebosim.png "Simulator")
 
 ### Steering the ATV
 
