@@ -393,7 +393,7 @@
 					</ros>
 					<!-- <topic_name>/velodyne_points</topic_name>-->
 					<frame_name>velodyne</frame_name>
-					<min_range>0.9</min_range>
+					<min_range>0.5</min_range>
 					<max_range>30</max_range>
 					<gaussian_noise>0.008</gaussian_noise>
 					<robotNamespace></robotNamespace>
@@ -412,7 +412,7 @@
 	<!-- ****************************** IMU *****************************    --> 
 	
 	 	<link name="imu">
-			<pose frame=''>0.235 -0.34 0.95933 0 0 0</pose>
+			<pose frame=''>-0.55 -0.34 0.465 0 0 0</pose>
 			<inertial>
 				<!--<pose frame=''>0 0 0 0 0 0</pose>--> 
 				<mass>0.1</mass>
