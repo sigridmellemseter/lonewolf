@@ -23,7 +23,7 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
   sudo apt install libgtsam-dev libgtsam-unstable-dev
   ```
 
-Now you can download the simulator to your ros2 workspace. If you haven't set up a ros2 workspace before, you can follow [this tutorial] (https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html).
+Now you can download the simulator to your ros2 workspace. If you haven't set up a ros2 workspace before, you can follow [this tutorial](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html).
 ```
 source opt/ros/foxy/setup.bash
 cd ~/ros2_ws/src
