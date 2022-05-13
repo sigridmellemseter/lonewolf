@@ -2,7 +2,7 @@
     ros__parameters:
       # LiDAR setting
       N_SCAN: 16
-      Horizon_SCAN: 1800
+      Horizon_SCAN: 170
       # IMU setting
       imuTopic: "imu_correct"
       imuAccNoise: 3.9939570888238808e-03
@@ -40,7 +40,7 @@ scan_matcher:
       initial_pose_qz: 0.0
       initial_pose_qw: 1.0
       use_imu: true
-      use_odom: false
+      use_odom: true
       debug_flag: false
 
 graph_based_slam:
