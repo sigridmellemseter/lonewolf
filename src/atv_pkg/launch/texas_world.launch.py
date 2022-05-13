@@ -32,7 +32,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
-    world_file_name = 'new_forest.world'
+    world_file_name = 'texas.world'
     pkg_dir = get_package_share_directory('atv_pkg')
 
     os.environ["GAZEBO_MODEL_PATH"] = os.path.join(pkg_dir, 'models')
