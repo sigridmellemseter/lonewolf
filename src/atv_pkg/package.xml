@@ -4,7 +4,7 @@
   <name>atv_pkg</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="cecilnik@stud.ntnu.no">cecilnik</maintainer>
+  <maintainer email="sigrimel@stud.ntnu.no">cecilnik</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
