@@ -2,7 +2,6 @@
 <?xml-model href="http://sdformat.org/schemas/root.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <sdf version="1.5">
   <world name="default">
-    <!-- <plugin name="mrs_gazebo_link_attacher_plugin" filename="libMRSGazeboLinkAttacherPlugin.so"/> --> 
 
     <!-- coordinate system {-->
     <spherical_coordinates>
@@ -29102,6 +29101,5 @@
         <pose>-60 -100 30 0 0.4 0.89</pose>
       </camera>
     </gui>
- 
   </world>
 </sdf>

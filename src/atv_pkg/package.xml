@@ -3,8 +3,10 @@
 <package format="3">
   <name>atv_pkg</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="sigrimel@stud.ntnu.no">cecilnik</maintainer>
+  <description>This package includes a model of an ATV and two worlds</description>
+  	<maintainer email='cecilnik@stud.ntnu.no'>cecilnik</maintainer>
+  	<maintainer email='sigrimel@stud.ntnu.no'>sigridmellemseter</maintainer>
+  	<maintainer email='elinemha@stud.ntnu.no'>elinemha</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>

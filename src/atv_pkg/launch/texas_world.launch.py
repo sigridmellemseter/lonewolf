@@ -13,8 +13,7 @@
 # limitations under the License.
 
 """
-Demo for spawn_entity.
-Launches Gazebo and spawns a model
+Launches Gazebo and spawns a the ATV model in the texas world
 """
 # A bunch of software packages that are needed to launch ROS2
 from http.server import executable

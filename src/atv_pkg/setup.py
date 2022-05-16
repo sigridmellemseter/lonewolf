@@ -30,9 +30,9 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='cecilnik',
-    maintainer_email='cecilnik@stud.ntnu.no',
-    description='TODO: Package description',
+    maintainer='cecilnik, sigridmellemseter, elinemha', 
+    maintainer_email='cecilnik@stud.ntnu.no, sigrimel@stud.ntnu.no, elinemha@stud.ntnu.no', 
+    description='This package includes a ATV model file, and to gazebo worlds',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
