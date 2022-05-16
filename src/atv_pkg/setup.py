@@ -22,9 +22,6 @@ setup(
         #path to the world file
         (os.path.join('share', package_name, 'worlds/'), glob('./worlds/*')),
         
-        #Path to the forest file
-        (os.path.join('share', package_name, 'models/forest_world/'), glob('./models/forest_world/*')),
-        
         #Path to the atv file
         (os.path.join('share', package_name, 'models/atvkda/'), glob('./models/atvkda/*')),
         
