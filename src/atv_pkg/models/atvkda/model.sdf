@@ -503,12 +503,6 @@
 				<update_rate>30</update_rate>
 				<plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
 					<ros>
-						<argument>~/out:=imu</argument>
-					</ros>
-					<frame_name>map</frame_name>
-				</plugin>
-				<plugin name="correct_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
-					<ros>
 						<namespace></namespace>
 						<argument>~/out:=imu_correct</argument>
 					</ros>
