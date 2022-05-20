@@ -31,6 +31,7 @@ git clone git@github.com:sigridmellemseter/lonewolf.git
 cd ~/ros2_ws
 colcon build
 ```
+Place the models in the folder gazebomodels inside the .gazebo/models/ folder. 
 
 
 
@@ -40,7 +41,7 @@ Open a terminal and write the following.
 source opt/ros/foxy/setup.bash
 cd ~/ros2_ws
 source install/setup.bash
-ros2 launch atv_pkg car_world.launch.py
+ros2 launch atv_pkg texasworld.launch.py
 ```
 You should now see the ATV and the world in Gazebo. 
 
