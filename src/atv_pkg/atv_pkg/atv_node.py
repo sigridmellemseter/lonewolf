@@ -1,9 +1,6 @@
 """
-ROS 2 node to spawn a mobile robot inside a warehouse.
+ROS 2 node to spawn a atv.
 
-Author:
-  - Addison Sears-Collins
-  - https://automaticaddison.com
 """
 import os # Operating system library
 import sys # Python runtime environment library
