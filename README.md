@@ -15,6 +15,7 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
     sudo apt install ros-foxy-teleop-twist-keyboard
     sudo apt install ros-foxy-ros2-control
     sudo apt install ros-foxy-ros2-controllers
+    sudo apt install ros-foxy-velodyne-gazebo-plugins
     ```
 - You also need to install gtsam. 
   ```
