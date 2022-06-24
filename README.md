@@ -7,7 +7,8 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
 - ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
 - You have installed Gazebo on your computer
 - You have installed the required packages: 
-  - https://github.com/RainerKuemmerle/g2o
+  - https://github.com/RainerKuemmerle/g2o (NB! You have to download and build ceres-solver for g2o to work)
+    - A tip when building g2o is to use ``` sudo make install```  instead off ```make``` 
  
     ```
     sudo apt install ros-foxy-gazebo-ros-pkgs
@@ -42,7 +43,7 @@ Open a terminal and write the following.
 source opt/ros/foxy/setup.bash
 cd ~/ros2_ws
 source install/setup.bash
-ros2 launch atv_pkg texasworld.launch.py
+ros2 launch atv_pkg texas_world.launch.py
 ```
 You should now see the ATV and the world in Gazebo. 
 
