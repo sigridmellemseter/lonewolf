@@ -80,8 +80,8 @@
 
   <!-- The base footprint of the robot is located underneath the chassis -->
   <joint name="base_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base_footprint"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
@@ -152,7 +152,7 @@
          an axis -->
     <joint name="${prefix}_joint" type="continuous">
       <parent link="base_link"/>
-      <child link="${prefix}_link"/>
+      <child link="drivewhl_b_l_link"/>
       <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
@@ -380,8 +380,8 @@
           </noise>
         </ray>
         <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
-          <topicName>velodyne</topicName>
-          <frameName>velodyne_vlp16_link</frameName>
+          <topic_name>velodyne_points</topic_name>
+          <frame_name>velodyne</frame_name>
           <min_range>1.0</min_range>
           <max_range>140.0</max_range>
           <gaussianNoise>0.008</gaussianNoise>
@@ -419,7 +419,7 @@
         <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
         <!-- odometry  --> 
-        <odometry_source>base_link</odometry_source>
+        <odometry_source>base_footprint</odometry_source>
         <odometry_frame>odom</odometry_frame>
         <robot_base_frame>base_link</robot_base_frame>
 
