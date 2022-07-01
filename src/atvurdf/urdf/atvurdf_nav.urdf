@@ -93,7 +93,7 @@
         <geometry>
           <mesh filename="file://$(find atvurdf)/meshes/rigid_right_front_wheels.stl" scale="0.001 0.001 0.001"/>
         </geometry>
-        <material name="Gray">
+        <material name="Black">
           <color rgba="0.0 0.0 0.0 0.8"/>
         </material>
       </visual>
@@ -172,7 +172,7 @@
           <mesh filename="file://$(find atvurdf)/meshes/rigid_right_front_wheels.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="Gray">
-          <color rgba="0.0 0.0 0.0 0.8"/>
+          <color rgba="0.0 0.0 0.0 0.5"/>
         </material>
       </visual>
 
@@ -189,11 +189,12 @@
     <!-- Connect the wheels to the base_link at the appropriate location, and 
          define a continuous joint to allow the wheels to freely rotate about
          an axis -->
-    <joint name="${prefix}_joint" type="continuous">
+    <joint name="${prefix}_joint" type="revolute">
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
       <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
-      <axis xyz="0 1 0"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="1000.0" lower="-0.78" upper="0.78" velocity="0.5"/>
     </joint>
   </xacro:macro>
 
@@ -228,11 +229,12 @@
     <!-- Connect the wheels to the base_link at the appropriate location, and 
          define a continuous joint to allow the wheels to freely rotate about
          an axis -->
-    <joint name="${prefix}_joint" type="continuous">
+    <joint name="${prefix}_joint" type="revolute">
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
       <origin xyz="${x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
-      <axis xyz="0 1 0"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="1000.0" lower="-0.78" upper="0.78" velocity="0.5"/>
     </joint>
   </xacro:macro>
 
@@ -240,37 +242,165 @@
        xacro:wheel tags. We also define the parameters to have one wheel
        on both sides at the back of our robot (i.e. x_reflect=-1). -->
   <xacro:wheel_front_left prefix="drivewhl_l_f" x_reflect="1" y_reflect="-1" />
-  <gazebo>
-		<plugin name='skid_steer_drive' filename='libgazebo_ros_diff_drive.so'>
-			<ros>
-				<namespace>  </namespace>
-			</ros>
 
-			<update_rate>30</update_rate>
+ <!--********************** LASER SCAN *****************************************************  -->
 
-			<num_wheel_pairs> 2 </num_wheel_pairs>
+   <link name="lidar_link">
+    <inertial>
+      <origin xyz="0 0 1" rpy="0 0 0"/>
+      <mass value="0.125"/>
+      <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+ 
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+         <cylinder radius="0.0" length="0.0"/>
+      </geometry>
+    </collision>
+ 
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+         <cylinder radius="0.0" length="0.0"/>
+      </geometry>
+    </visual>
+  </link>
+     
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.215 0.0 0.30" rpy="0 0 0"/>
+  </joint>
+     
+  <gazebo reference="lidar_link">
+    <sensor name="lidar" type="ray">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>120</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.3</min>
+          <max>15.0</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="lidar_link">
+    <mu1>0.01</mu1>
+    <mu2>0.01</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
 
-			<left_joint>drivewhl_l_f_joint</left_joint>
-			<right_joint>drivewhl_r_f_joint</right_joint>
-			<wheel_separation>0.914</wheel_separation>
-			<wheel_diameter>0.694622</wheel_diameter>
 
-			<left_joint>drivewhl_b_l_joint</left_joint>
-			<right_joint>drivewhl_b_r_joint</right_joint>
-			<wheel_separation>0.914</wheel_separation>
-			<wheel_diameter>0.694622</wheel_diameter>
+  <!--****************************VLP16***************************  -->
+    <link name="velodyne_vlp16">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.125"/>
+        <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+      </inertial>
+  
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.0508" length="0.75"/>
+        </geometry>
+      </collision>
+  
+      <visual>
+        <origin xyz="0.617 -0.985 -0.27" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="file://$(find atvurdf)/meshes/VLP16_base_1.dae" scale="1 1 1"/>
+        </geometry>
+      </visual>
+      <visual>
+        <origin xyz="0.617 -0.985 -0.27" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="file://$(find atvurdf)/meshes/VLP16_base_2.dae" scale="1 1 1"/>
+        </geometry>
+      </visual>
+      <visual>
+        <origin xyz="0.617 -0.985 -0.27" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="file://$(find atvurdf)/meshes/VLP16_scan.dae" scale="1 1 1"/>
+        </geometry>
+      </visual> 
+    </link>
 
-		 	<max_wheel_torque>100</max_wheel_torque>
-		 	<max_wheel_acceleration>100</max_wheel_acceleration>	
-			
-			<publish_odom>false</publish_odom>
-			<publish_odom_tf>true</publish_odom_tf>
-			<publish_wheel_tf>true</publish_wheel_tf>
-			
-			<odometry_topic>odom</odometry_topic>
-			<odometry_frame>odom</odometry_frame>
-			<robot_base_frame>base_link</robot_base_frame>
-		</plugin>
+    <gazebo reference="velodyne_vlp16">
+      <sensor type="ray" name="VLP16">
+        <pose>0 0 0 0 0 0</pose>
+        <update_rate>10</update_rate>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>16</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>1.0</min>
+            <max>140.0</max>
+            <resolution>0.001</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.0</stddev>
+          </noise>
+        </ray>
+        <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
+          <topicName>velodyne</topicName>
+          <frameName>velodyne_vlp16_link</frameName>
+          <min_range>1.0</min_range>
+          <max_range>140.0</max_range>
+          <gaussianNoise>0.008</gaussianNoise>
+        </plugin>
+      </sensor>
     </gazebo>
 
+
+    <joint name="velodyne_vlp16_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="velodyne_vlp16"/>
+      <origin xyz="0.215 1.0 0.70" rpy="0 0 0"/>
+    </joint>
+
+
+
+
 </robot>
+
+

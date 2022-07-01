@@ -21,12 +21,12 @@ def generate_launch_description():
   robot_name_in_model = 'atvurdf'
   rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
   urdf_file_path = 'urdf/atvurdf_nav.urdf'
-  world_file_path = 'worlds/neighborhood.world'
+  world_file_path = 'worlds/texas.world'
      
   # Pose where we want to spawn the robot
   spawn_x_val = '0.0'
   spawn_y_val = '0.0'
-  spawn_z_val = '0.0'
+  spawn_z_val = '2.0'
   spawn_yaw_val = '0.00'
  
   ############ You do not need to change anything below this line #############
