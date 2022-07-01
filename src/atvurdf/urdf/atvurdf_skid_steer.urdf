@@ -80,8 +80,8 @@
 
   <!-- The base footprint of the robot is located underneath the chassis -->
   <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
@@ -251,14 +251,14 @@
     </inertial>
  
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0.835 0.02 0.44" rpy="0 0 0"/>
       <geometry>
          <cylinder radius="0.0" length="0.0"/>
       </geometry>
     </collision>
  
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0.835 0.02 0.44" rpy="0 0 0"/>
       <geometry>
          <cylinder radius="0.0" length="0.0"/>
       </geometry>
@@ -273,6 +273,7 @@
      
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="ray">
+      <origin xyz="0.0 1.0 0.0" rpy="0 0 0"/>
       <always_on>true</always_on>
       <visualize>true</visualize>
       <update_rate>5</update_rate>
@@ -315,7 +316,7 @@
   <!--****************************VLP16***************************  -->
     <link name="velodyne_vlp16">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <pose>0 1 0 0 0 0 </pose>
         <mass value="0.125"/>
         <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
       </inertial>
@@ -419,7 +420,6 @@
         <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
         <!-- odometry  --> 
-        <odometry_source>base_footprint</odometry_source>
         <odometry_frame>odom</odometry_frame>
         <robot_base_frame>base_link</robot_base_frame>
 

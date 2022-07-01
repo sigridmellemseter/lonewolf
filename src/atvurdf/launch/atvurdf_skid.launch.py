@@ -20,7 +20,7 @@ def generate_launch_description():
   package_name = 'atvurdf'
   robot_name_in_model = 'atvurdf'
   rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
-  urdf_file_path = 'urdf/atvurdf_nav.urdf'
+  urdf_file_path = 'urdf/atvurdf_skid_steer.urdf'
   world_file_path = 'worlds/texas.world'
      
   # Pose where we want to spawn the robot
