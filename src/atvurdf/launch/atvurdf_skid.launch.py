@@ -183,6 +183,6 @@ def generate_launch_description():
   ld.add_action(start_robot_state_publisher_cmd)
   ld.add_action(start_joint_state_publisher_cmd)
   ld.add_action(start_rviz_cmd)
-  ld.add_action(start_joint_state_publisher_gui_node)
+  #ld.add_action(start_joint_state_publisher_gui_node)
  
   return ld
