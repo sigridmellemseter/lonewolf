@@ -523,6 +523,20 @@
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     </joint>
 
+<gazebo>
+  <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+    <ros>
+      <!-- <namespace>/br</namespace> -->
+      <remapping>~/out:=joint_states</remapping>
+    </ros>
+    <update_rate>30</update_rate>
+    <joint_name>drivewhl_f_r_joint</joint_name>
+    <joint_name>drivewhl_f_l_joint</joint_name>
+    <joint_name>drivewhl_b_r_joint</joint_name>
+    <joint_name>drivewhl_b_l_joint</joint_name>
+  </plugin>
+</gazebo>
+
 
 </robot>
 
