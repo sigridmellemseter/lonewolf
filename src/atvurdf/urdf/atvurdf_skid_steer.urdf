@@ -12,13 +12,14 @@
     </visual>
 
     <collision>
+      <origin xyz="0.05 0 0.05" />
       <geometry>
         <mesh filename="file://$(find atvurdf)/meshes/rigid_body.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="10"/>
-      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+      <mass value="30"/>
+      <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0"/>
     </inertial>
   </link>
 
@@ -60,11 +61,13 @@
       </collision>
       <inertial>
         <mass value="10"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_b_r_link">
       <material>Gazebo/Black</material>
+      <mu1>1.6</mu1>
+      <mu2>1.6</mu2>
     </gazebo>
 
     <joint name="drivewhl_b_r_joint" type="continuous">
@@ -95,11 +98,13 @@
       </collision>
       <inertial>
         <mass value="10"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_b_l_link">
       <material>Gazebo/Black</material>
+      <mu1>1.6</mu1>
+      <mu2>1.6</mu2>
     </gazebo>
 
     <joint name="drivewhl_b_l_joint" type="continuous">
@@ -129,12 +134,14 @@
       </collision>
       <inertial>
         <mass value="10"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
       </inertial>
     </link>
 
     <gazebo reference="drivewhl_f_r_link">
       <material>Gazebo/Black</material>
+      <mu1>1.6</mu1>
+      <mu2>1.6</mu2>
     </gazebo>
 
     <joint name="drivewhl_f_r_joint" type="continuous">
@@ -165,11 +172,13 @@
       </collision>
       <inertial>
         <mass value="10"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_f_l_link">
       <material>Gazebo/Black</material>
+      <mu1>1.6</mu1>
+      <mu2>1.6</mu2>
     </gazebo>
 
     <joint name="drivewhl_f_l_joint" type="continuous">
@@ -226,7 +235,7 @@
         </scan>
         <range>
           <min>0.4</min>
-          <max>15.0</max>
+          <max>20.0</max>
           <resolution>0.015</resolution>
         </range>
         <noise>
@@ -252,7 +261,7 @@
 
 
   <!--****************************VLP16***************************  -->
-    <link name="velodyne_vlp16">
+    <link name="velodyne">
       <inertial>
         <pose>0 0 0 0 0 0 </pose>
         <mass value="0.125"/>
@@ -262,7 +271,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="0.0508" length="0.75"/>
+          <cylinder radius="0.0516" length="0.0717"/>
         </geometry>
       </collision>
   
@@ -286,7 +295,7 @@
       </visual> 
     </link>
 
-    <gazebo reference="velodyne_vlp16">
+    <gazebo reference="velodyne">
       <sensor type="ray" name="VLP16">
         <pose>0 0 0 0 0 0</pose>
         <update_rate>10</update_rate>
@@ -319,7 +328,9 @@
           </noise>
         </ray>
         <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
-          <topic_name>velodyne_points</topic_name>
+          <ros>
+            <remapping>~/out:=points_raw</remapping>
+          </ros>
           <frame_name>velodyne</frame_name>
           <min_range>1.0</min_range>
           <max_range>140.0</max_range>
@@ -329,9 +340,9 @@
     </gazebo>
 
 
-    <joint name="velodyne_vlp16_joint" type="fixed">
+    <joint name="velodyne_joint" type="fixed">
       <parent link="base_link"/>
-      <child link="velodyne_vlp16"/>
+      <child link="velodyne"/>
       <origin xyz="0.835 0.02 0.44" rpy="0 0 0"/>
     </joint>
 
@@ -354,7 +365,7 @@
 
         <wheel_separation>0.914</wheel_separation>
         <wheel_diameter>0.694622</wheel_diameter>
-        <max_wheel_torque>20.0</max_wheel_torque>
+        <max_wheel_torque>100.0</max_wheel_torque>
         <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
         <!-- odometry  --> 
