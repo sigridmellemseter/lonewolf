@@ -471,20 +471,97 @@
       <child link="imu_link"/>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     </joint>
+  <!--****************************Joint State Publisher***************************  -->
 
-<gazebo>
-  <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
-    <ros>
-      <!-- <namespace>/br</namespace> -->
-      <remapping>~/out:=joint_states</remapping>
-    </ros>
-    <update_rate>30</update_rate>
-    <joint_name>drivewhl_f_r_joint</joint_name>
-    <joint_name>drivewhl_f_l_joint</joint_name>
-    <joint_name>drivewhl_b_r_joint</joint_name>
-    <joint_name>drivewhl_b_l_joint</joint_name>
-  </plugin>
-</gazebo>
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <!-- <namespace>/br</namespace> -->
+        <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>drivewhl_f_r_joint</joint_name>
+      <joint_name>drivewhl_f_l_joint</joint_name>
+      <joint_name>drivewhl_b_r_joint</joint_name>
+      <joint_name>drivewhl_b_l_joint</joint_name>
+    </plugin>
+  </gazebo>
+  <!--****************************GPS***************************  -->
+
+  <link name="gps_link">
+      <collision>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.2"/>
+        </geometry>
+      </collision>
+
+      <visual>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.2 0.2"/>
+        </geometry>
+        <material name="orange"/>
+      </visual>
+
+      <inertial>
+        <origin xyz="0 0 1" rpy="0 0 0"/>
+        <mass value="1"/>
+        <inertia
+          ixx="1.0" ixy="0.0" ixz="0.0"
+          iyy="1.0" iyz="0.0"
+          izz="1.0"/>
+      </inertial>
+  </link>
+    
+    
+  <material name="orange">
+    <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+  </material>
+  <gazebo reference="gps_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+    
+    
+  <joint name="gps_joint" type="fixed">
+    <parent link="base_link"/> <!-- ?? -->
+    <child link="gps_link"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  </joint>
+
+    
+  <gazebo reference="gps_link">
+    <sensor name="gps" type="gps">
+      <!-- ensure the sensor is active (required) -->
+      <always_on>true</always_on>
+      <update_rate>5</update_rate>
+      <gps>
+        <position_sensing>
+          <horizontal>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </horizontal>
+          <vertical>
+            <noise type="gaussian">
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </vertical>
+        </position_sensing>
+      </gps>
+      <plugin name="gps_plugin" filename="libgazebo_ros_gps_sensor.so">
+        <ros>
+          <!-- publish to /gps/data -->
+          <namespace>/gps</namespace>
+          <remapping>~/out:=data</remapping>
+        </ros>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
 
 
 </robot>
