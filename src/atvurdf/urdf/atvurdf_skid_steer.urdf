@@ -19,7 +19,7 @@
     </collision>
     <inertial>
       <mass value="30"/>
-      <inertia ixx="1.0" ixy="1.0" ixz="1.0" iyy="1.0" iyz="1.0" izz="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
 
@@ -32,15 +32,15 @@
   <!-- Define the center of the main robot chassis projected on the ground -->	
   <link name="base_footprint">
   	<inertial>
-      <mass value="10"/>
+      <mass value="0.0"/>
       <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
   </inertial>
   </link>
 
   <!-- The base footprint of the robot is located underneath the chassis -->
   <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   </joint>
 
@@ -60,14 +60,17 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="10"/>
-        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_b_r_link">
       <material>Gazebo/Black</material>
-      <mu1>1.6</mu1>
-      <mu2>1.6</mu2>
+      <mu1>0.3</mu1>
+      <mu2>0.6</mu2>
+      <kp>1000000.0</kp> 
+      <kd>100</kd>
+      <min_depth>0.05</min_depth>
     </gazebo>
 
     <joint name="drivewhl_b_r_joint" type="continuous">
@@ -97,14 +100,17 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="10"/>
-        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_b_l_link">
       <material>Gazebo/Black</material>
-      <mu1>1.6</mu1>
-      <mu2>1.6</mu2>
+      <mu1>0.3</mu1>
+      <mu2>0.6</mu2>
+      <kp>1000000.0</kp> 
+      <kd>100</kd>
+      <min_depth>0.05</min_depth>
     </gazebo>
 
     <joint name="drivewhl_b_l_joint" type="continuous">
@@ -133,15 +139,18 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="10"/>
-        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
       </inertial>
     </link>
 
     <gazebo reference="drivewhl_f_r_link">
       <material>Gazebo/Black</material>
-      <mu1>1.6</mu1>
-      <mu2>1.6</mu2>
+      <mu1>0.3</mu1>
+      <mu2>0.6</mu2>
+      <kp>1000000.0</kp> 
+      <kd>100</kd>
+      <min_depth>0.05</min_depth>
     </gazebo>
 
     <joint name="drivewhl_f_r_joint" type="continuous">
@@ -171,14 +180,17 @@
         </geometry>
       </collision>
       <inertial>
-        <mass value="10"/>
-        <inertia ixx="0.0125" ixy="0.0" ixz="0.0" iyy="0.0125" iyz="0.0" izz="0.05"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
       </inertial>
     </link>
     <gazebo reference="drivewhl_f_l_link">
       <material>Gazebo/Black</material>
-      <mu1>1.6</mu1>
-      <mu2>1.6</mu2>
+      <mu1>0.3</mu1>
+      <mu2>0.6</mu2>
+      <kp>1000000.0</kp> 
+      <kd>100</kd>
+      <min_depth>0.05</min_depth>
     </gazebo>
 
     <joint name="drivewhl_f_l_joint" type="continuous">
@@ -366,11 +378,11 @@
         <wheel_separation>0.914</wheel_separation>
         <wheel_diameter>0.694622</wheel_diameter>
         <max_wheel_torque>100.0</max_wheel_torque>
-        <max_wheel_acceleration>10.0</max_wheel_acceleration>
+        <max_wheel_acceleration>100.0</max_wheel_acceleration>
 
         <!-- odometry  --> 
         <odometry_frame>odom</odometry_frame>
-        <robot_base_frame>base_footprint</robot_base_frame>
+        <robot_base_frame>base_link</robot_base_frame>
 
         <!-- topic & re remappings -->
         <ros>
@@ -413,7 +425,7 @@
     <gazebo reference="imu_link">
       <sensor name="br_imu" type="imu">
         <always_on>true</always_on>
-        <update_rate>100</update_rate>
+        <update_rate>30</update_rate>
         <imu>
           <angular_velocity>
             <x>
@@ -508,16 +520,12 @@
         <origin xyz="0 0 1" rpy="0 0 0"/>
         <mass value="1"/>
         <inertia
-          ixx="1.0" ixy="0.0" ixz="0.0"
-          iyy="1.0" iyz="0.0"
-          izz="1.0"/>
+          ixx="0.1" ixy="0.0" ixz="0.0"
+          iyy="0.1" iyz="0.0"
+          izz="0.1"/>
       </inertial>
   </link>
     
-    
-  <material name="orange">
-    <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
-  </material>
   <gazebo reference="gps_link">
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -538,6 +546,7 @@
       <gps>
         <position_sensing>
           <horizontal>
+
             <noise type="gaussian">
               <mean>0.0</mean>
               <stddev>0.0</stddev>
