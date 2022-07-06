@@ -45,21 +45,21 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
     sudo make install
   ```
 
-- [gtsam](https://github.com/borglab/gtsam). 
-  ```
-  sudo add-apt-repository ppa:borglab/gtsam-release-4.0
-  sudo apt update
-  sudo apt install libgtsam-dev libgtsam-unstable-dev
-  ```
-- Necessary ROS Foxy packages: 
-  ```
-  sudo apt install ros-foxy-gazebo-ros-pkgs
-  sudo apt install ros-foxy-velodyne 
-  sudo apt install ros-foxy-teleop-twist-keyboard
-  sudo apt install ros-foxy-ros2-control
-  sudo apt install ros-foxy-ros2-controllers
-  sudo apt install ros-foxy-velodyne-gazebo-plugins
-  ```
+  - [gtsam](https://github.com/borglab/gtsam). 
+    ```
+    sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+    sudo apt update
+    sudo apt install libgtsam-dev libgtsam-unstable-dev
+    ```
+  - Necessary ROS Foxy packages: 
+    ```
+    sudo apt install ros-foxy-gazebo-ros-pkgs
+    sudo apt install ros-foxy-velodyne 
+    sudo apt install ros-foxy-teleop-twist-keyboard
+    sudo apt install ros-foxy-ros2-control
+    sudo apt install ros-foxy-ros2-controllers
+    sudo apt install ros-foxy-velodyne-gazebo-plugins
+    ```
 
 Now you can download the simulator to your ros2 workspace. If you haven't set up a ros2 workspace before, you can follow [this tutorial](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html).
 ```
