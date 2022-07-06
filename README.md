@@ -85,7 +85,7 @@ If you don't have a *.gazebo/models/* folder, you can just make one with ```mkdi
 The first two times you build you may get some errors. Just build again and they should dissapear. 
 
 
-### Launching the simulator
+## Launching the simulator
 Open a terminal and write the following. 
 ```
 source opt/ros/foxy/setup.bash
@@ -97,7 +97,7 @@ You should now see the ATV and the world in Gazebo.
 
 ![Simulator in Gazebo](.images/gazebosim.png "Simulator")
 
-### Steering the ATV
+## Steering the ATV
 
 ```
 source opt/ros/foxy/setup.bash
@@ -105,7 +105,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 This application tells you how to steer the robot. 
 
-### How view point cloud in rviz2: 
+## How view point cloud in rviz2: 
 While the simulator is running, open a new terminal and run rviz2 
 ```
 source opt/ros/foxy/setup.bash
@@ -121,7 +121,7 @@ Now you have to add the PointCloud2 in rviz:
 
 Now you should see the point cloud in rviz. To get a better visual choose the Style "Flat Squares", Size (m) to 0.03 and set Color Transformer to "AxisColor"
 
-### Launching SLAM 
+## Launching SLAM 
 While the simulator is running, open a new terminal and write the following. 
 ```
 source opt/ros/foxy/setup.bash
