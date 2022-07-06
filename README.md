@@ -61,23 +61,34 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
   sudo apt install ros-foxy-velodyne-gazebo-plugins
   ```
 
-Now you can download the simulator to your ros2 workspace. If you haven't set up a ros2 workspace before, you can follow [this tutorial](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html).
+## Downloading the simulator
+In your home directory:
 ```
 source opt/ros/foxy/setup.bash
-cd ~/ros2_ws/src
-git clone git@github.com:sigridmellemseter/lonewolf.git
-cd ~/ros2_ws
+git clone --recursive git@github.com:sigridmellemseter/lonewolf.git
+cd lonewolf/
 colcon build
 ```
-Place the models in the folder gazebomodels inside the .gazebo/models/ folder. 
+If you get any *opencv2* errors, enter the following: 
+```
 
+```
+
+Place the models in the folder **gazebomodels** inside the .gazebo/models/ folder:
+
+```
+sudo cp -r /usr/include/opencv4/opencv2/ ../
+
+```
+
+The first two times you build you may get some errors. Just build again and they should dissapear. 
 
 
 ### Launching the simulator
 Open a terminal and write the following. 
 ```
 source opt/ros/foxy/setup.bash
-cd ~/ros2_ws
+cd ~/lonewolf
 source install/setup.bash
 ros2 launch atv_pkg texas_world.launch.py
 ```
