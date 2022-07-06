@@ -71,15 +71,16 @@ colcon build
 ```
 If you get any *opencv2* errors, enter the following: 
 ```
-
+sudo cp -r /usr/include/opencv4/opencv2/ ../
 ```
 
 Place the models in the folder **gazebomodels** inside the .gazebo/models/ folder:
 
 ```
-sudo cp -r /usr/include/opencv4/opencv2/ ../
-
+cp -r ~/lonewolf/gazebomodels/. ~/.gazebo/models/
 ```
+
+If you don't have a *.gazebo/models/* folder, you can just make one with ```mkdir ~/.gazebo/models/```
 
 The first two times you build you may get some errors. Just build again and they should dissapear. 
 
