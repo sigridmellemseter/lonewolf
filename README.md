@@ -5,19 +5,54 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
 
 ## Prerequisites
 - ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
-- You have installed Gazebo on your computer
+- You have installed Gazebo on your computer: ```sudo apt install gazebo11```
 - You have installed the required packages: 
-  - https://github.com/RainerKuemmerle/g2o (NB! You have to download and build ceres-solver for g2o to work)
-    - A tip when building g2o is to use ``` sudo make install```  instead off ```make``` 
+  - Ceres-solver: 
+  ```
+    # Install Dependencies
+    sudo apt update -y && sudo apt upgrade -y
+
+    sudo apt-get install libgoogle-glog-dev libgflags-dev -y
+    sudo apt-get install libatlas-base-dev -y
+    sudo apt-get install libeigen3-dev -y
+    sudo apt-get install libsuitesparse-dev -y
+
+    # Download
+    cd /tmp
+    CERES_VERSION="ceres-solver-2.0.0"
+    CERES_ARCHIVE="$CERES_VERSION.tar.gz"
+    wget http://ceres-solver.org/$CERES_ARCHIVE
+    tar xfv $CERES_ARCHIVE
+
+    # Install
+    cd $CERES_VERSION
+    mkdir build
+    cd build
+    NUM_CPU_CORES=$(grep -c ^processor /proc/cpuinfo)
+    cmake ..
+    cmake --build . -j $NUM_CPU_CORES
+
+    sudo apt install checkinstall libssl-dev -y
+    sudo checkinstall --pkgname ceres-solver
+  ```
+  - [g2o](https://github.com/RainerKuemmerle/g2o)
+    ```
+      git clone --recursive git@github.com:RainerKuemmerle/g2o.git
+      cd g2o
+      mkdir build
+      cd build
+      cmake ../
+      sudo make install
+    ```
  
-    ```
-    sudo apt install ros-foxy-gazebo-ros-pkgs
-    sudo apt install ros-foxy-velodyne 
-    sudo apt install ros-foxy-teleop-twist-keyboard
-    sudo apt install ros-foxy-ros2-control
-    sudo apt install ros-foxy-ros2-controllers
-    sudo apt install ros-foxy-velodyne-gazebo-plugins
-    ```
+  ```
+  sudo apt install ros-foxy-gazebo-ros-pkgs
+  sudo apt install ros-foxy-velodyne 
+  sudo apt install ros-foxy-teleop-twist-keyboard
+  sudo apt install ros-foxy-ros2-control
+  sudo apt install ros-foxy-ros2-controllers
+  sudo apt install ros-foxy-velodyne-gazebo-plugins
+  ```
 - You also need to install gtsam. 
   ```
   sudo add-apt-repository ppa:borglab/gtsam-release-4.0
