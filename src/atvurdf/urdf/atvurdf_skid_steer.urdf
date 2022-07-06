@@ -41,7 +41,7 @@
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.772311" rpy="0 0 0"/>
   </joint>
 
   <!-- *********************** DRIVE WHEEL BACK RIGHT ******************************  -->
@@ -329,7 +329,7 @@
             </vertical>
           </scan>
           <range>
-            <min>1.5</min>
+            <min>2</min>
             <max>140.0</max>
             <resolution>0.001</resolution>
           </range>
@@ -470,8 +470,8 @@
         </imu>
         <plugin name="bytes_imu" filename="libgazebo_ros_imu_sensor.so">
             <ros>
-                <namespace>imu</namespace>
-                <remapping>~/out:=data</remapping>
+                <namespace></namespace>
+                <remapping>~/out:=imu</remapping>
             </ros>
             <initial_orientation_as_reference>false</initial_orientation_as_reference>
         </plugin>
@@ -564,7 +564,7 @@
         <ros>
           <!-- publish to /gps/data -->
           <namespace>/gps</namespace>
-          <remapping>~/out:=data</remapping>
+          <remapping>~/out:=fix</remapping>
         </ros>
       </plugin>
     </sensor>
