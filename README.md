@@ -7,7 +7,7 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
 - ROS 2 Foxy installed on Ubuntu Linux 20.04 or newer
 - You have installed Gazebo on your computer: ```sudo apt install gazebo11```
 - You have installed the required packages: 
-  - Ceres-solver: 
+  - [Ceres-solver](https://brucknem.github.io/posts/install-ceres-solver/): 
   ```
     # Install Dependencies
     sudo apt update -y && sudo apt upgrade -y
@@ -36,15 +36,22 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
     sudo checkinstall --pkgname ceres-solver
   ```
   - [g2o](https://github.com/RainerKuemmerle/g2o)
-    ```
-      git clone --recursive git@github.com:RainerKuemmerle/g2o.git
-      cd g2o
-      mkdir build
-      cd build
-      cmake ../
-      sudo make install
-    ```
- 
+  ```
+    git clone --recursive git@github.com:RainerKuemmerle/g2o.git
+    cd g2o
+    mkdir build
+    cd build
+    cmake ../
+    sudo make install
+  ```
+
+- [gtsam](https://github.com/borglab/gtsam). 
+  ```
+  sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+  sudo apt update
+  sudo apt install libgtsam-dev libgtsam-unstable-dev
+  ```
+- Necessary ROS Foxy packages: 
   ```
   sudo apt install ros-foxy-gazebo-ros-pkgs
   sudo apt install ros-foxy-velodyne 
@@ -52,12 +59,6 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
   sudo apt install ros-foxy-ros2-control
   sudo apt install ros-foxy-ros2-controllers
   sudo apt install ros-foxy-velodyne-gazebo-plugins
-  ```
-- You also need to install gtsam. 
-  ```
-  sudo add-apt-repository ppa:borglab/gtsam-release-4.0
-  sudo apt update
-  sudo apt install libgtsam-dev libgtsam-unstable-dev
   ```
 
 Now you can download the simulator to your ros2 workspace. If you haven't set up a ros2 workspace before, you can follow [this tutorial](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html).
