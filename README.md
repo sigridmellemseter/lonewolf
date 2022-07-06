@@ -98,6 +98,7 @@ You should now see the ATV and the world in Gazebo.
 ![Simulator in Gazebo](.images/gazebosim.png "Simulator")
 
 ## Steering the ATV
+You can steer the robot through keyboard commands using the ros2 application *teleop_twist_keyboard*.
 
 ```
 source opt/ros/foxy/setup.bash
@@ -125,7 +126,7 @@ Now you should see the point cloud in rviz. To get a better visual choose the St
 While the simulator is running, open a new terminal and write the following. 
 ```
 source opt/ros/foxy/setup.bash
-cd ~/ros2_ws
+cd ~/lonewolf
 source install/setup.bash
 ros2 launch scanmatcher lio_bigloop.launch.py
 ```
