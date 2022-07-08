@@ -92,7 +92,7 @@ Open a terminal and write the following.
 source /opt/ros/foxy/setup.bash
 cd ~/lonewolf
 source install/setup.bash
-ros2 launch atv_pkg texas_world.launch.py
+ros2 launch atvurdf <world_name>.launch.py
 ```
 You should now see the ATV and the world in Gazebo. 
 
