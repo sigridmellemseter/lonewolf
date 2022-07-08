@@ -96,7 +96,7 @@ ros2 launch atv_pkg texas_world.launch.py
 ```
 You should now see the ATV and the world in Gazebo. 
 
-![Simulator in Gazebo](.images/launchwordls.png "Simulator")
+![Simulator in Gazebo](.images/launchworlds.png  "Simulator")
 
 ## Steering the ATV
 You can steer the robot through keyboard commands using the ros2 application *teleop_twist_keyboard*.
