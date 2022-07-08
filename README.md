@@ -59,12 +59,13 @@ Repository for the bachelor thesis: ROS simulated world for ATV and finding opti
   sudo apt install ros-foxy-ros2-control
   sudo apt install ros-foxy-ros2-controllers
   sudo apt install ros-foxy-velodyne-gazebo-plugins
+  sudo apt install ros-foxy-slam-toolbox        #For 2D slam
   ```
 
 ## Downloading the simulator
 In your home directory:
 ```
-source opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
 git clone --recursive git@github.com:sigridmellemseter/lonewolf.git
 cd lonewolf/
 colcon build
@@ -88,14 +89,14 @@ The first two times you build you may get some errors. Just build again and they
 ## Launching the simulator
 Open a terminal and write the following. 
 ```
-source opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
 cd ~/lonewolf
 source install/setup.bash
-ros2 launch atv_pkg texas_world.launch.py
+ros2 launch atvurdf <world_name>.launch.py
 ```
 You should now see the ATV and the world in Gazebo. 
 
-![Simulator in Gazebo](.images/gazebosim.png "Simulator")
+![Simulator in Gazebo](.images/launchworlds.png  "Simulator")
 
 ## Steering the ATV
 You can steer the robot through keyboard commands using the ros2 application *teleop_twist_keyboard*.
@@ -109,7 +110,7 @@ This application tells you how to steer the robot.
 ## How view point cloud in rviz2: 
 While the simulator is running, open a new terminal and run rviz2 
 ```
-source opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
 rviz2 
 ```
 
@@ -122,10 +123,10 @@ Now you have to add the PointCloud2 in rviz:
 
 Now you should see the point cloud in rviz. To get a better visual choose the Style "Flat Squares", Size (m) to 0.03 and set Color Transformer to "AxisColor"
 
-## Launching SLAM 
+## Launching 3D SLAM (Generating maps)
 While the simulator is running, open a new terminal and write the following. 
 ```
-source opt/ros/foxy/setup.bash
+source /opt/ros/foxy/setup.bash
 cd ~/lonewolf
 source install/setup.bash
 ros2 launch scanmatcher lio_bigloop.launch.py
@@ -142,5 +143,16 @@ To see the data more clearly, you can choose the following styles:
 - `/modified_path`: Color green
 
 ![Map, path, modified map and modified path i Rviz2](.images/SLAMcorrect.png "map from point cloud and SLAM")
+
+
+## Launching SLAM (2D) (Navigation)
+Slam Toolbox is a set of tools and capabilities for 2D SLAM built by Steve Macenski. You can read more about the functionalities of this toolbox [here](https://github.com/SteveMacenski/slam_toolbox).
+
+To start the 2D slam, open a new terminal and write the following. 
+```
+source /opt/ros/foxy/setup.bash
+ros2 launch slam_toolbox online_async_launch.py
+```
+Only *online_async* (asynchronous modes of mapping) is testet with this simulator. 
 
 
