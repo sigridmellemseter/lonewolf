@@ -19,7 +19,7 @@ def generate_launch_description():
   gazebo_models_path = 'models'
   package_name = 'atvurdf'
   robot_name_in_model = 'atvurdf'
-  rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
+  rviz_config_file_path = 'rviz/rviz_kristian_config.rviz'
   urdf_file_path = 'urdf/atvurdf_skid_steer.urdf'
   world_file_path = 'worlds/navigation.world'
      

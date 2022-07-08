@@ -253,7 +253,7 @@
         <noise>
           <type>gaussian</type>
           <mean>0.0</mean>
-          <stddev>0.01</stddev>
+          <stddev>0.0</stddev>
         </noise>
       </ray>
       <plugin name="scan" filename="libgazebo_ros_ray_sensor.so">
@@ -570,10 +570,6 @@
       <joint_name>drivewhl_f_l_joint</joint_name>
       <joint_name>drivewhl_b_r_joint</joint_name>
       <joint_name>drivewhl_b_l_joint</joint_name>
-
-      <joint_name>base_joint</joint_name>
-      <joint_name></joint_name>
-      <joint_name></joint_name>
     </plugin>
   </gazebo>
  
