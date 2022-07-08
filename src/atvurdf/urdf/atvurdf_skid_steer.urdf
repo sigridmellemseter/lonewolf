@@ -241,12 +241,12 @@
           <horizontal>
             <samples>120</samples>
             <resolution>1.000000</resolution>
-            <min_angle>-3.14159</min_angle>
-            <max_angle>3.14159</max_angle>
+            <min_angle>2.5</min_angle>
+            <max_angle>-2.5</max_angle>
           </horizontal>
         </scan>
         <range>
-          <min>0.4</min>
+          <min>0.5</min>
           <max>20.0</max>
           <resolution>0.015</resolution>
         </range>
@@ -318,18 +318,18 @@
             <horizontal>
               <samples>360</samples>
               <resolution>1</resolution>
-              <min_angle>-3.14159</min_angle>
-              <max_angle>3.14159</max_angle>
+              <min_angle>-2.5</min_angle>
+              <max_angle>2.5</max_angle>
             </horizontal>
             <vertical>
               <samples>16</samples>
               <resolution>1</resolution>
-              <min_angle>-3.14159</min_angle>
-              <max_angle>3.14159</max_angle>
+              <min_angle>-2.5</min_angle>
+              <max_angle>2.5</max_angle>
             </vertical>
           </scan>
           <range>
-            <min>2</min>
+            <min>0.5</min>
             <max>140.0</max>
             <resolution>0.001</resolution>
           </range>
@@ -483,23 +483,9 @@
       <child link="imu_link"/>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     </joint>
-  <!--****************************Joint State Publisher***************************  -->
+  
 
-  <gazebo>
-    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
-      <ros>
-        <!-- <namespace>/br</namespace> -->
-        <remapping>~/out:=joint_states</remapping>
-      </ros>
-      <update_rate>30</update_rate>
-      <joint_name>drivewhl_f_r_joint</joint_name>
-      <joint_name>drivewhl_f_l_joint</joint_name>
-      <joint_name>drivewhl_b_r_joint</joint_name>
-      <joint_name>drivewhl_b_l_joint</joint_name>
-    </plugin>
-  </gazebo>
-  <!--****************************GPS***************************  -->
-
+   <!--****************************GPS***************************  -->
   <link name="gps_link">
       <collision>
         <origin xyz="0 0 0.1" rpy="0 0 0"/>
@@ -569,6 +555,28 @@
       </plugin>
     </sensor>
   </gazebo>
+
+
+<!--****************************Joint State Publisher***************************  -->
+
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <!-- <namespace>/br</namespace> -->
+        <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>drivewhl_f_r_joint</joint_name>
+      <joint_name>drivewhl_f_l_joint</joint_name>
+      <joint_name>drivewhl_b_r_joint</joint_name>
+      <joint_name>drivewhl_b_l_joint</joint_name>
+
+      <joint_name>base_joint</joint_name>
+      <joint_name></joint_name>
+      <joint_name></joint_name>
+    </plugin>
+  </gazebo>
+ 
 
 
 

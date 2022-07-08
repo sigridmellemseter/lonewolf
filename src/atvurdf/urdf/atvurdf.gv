@@ -1,0 +1,32 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"base_footprint" [label="base_footprint"];
+"drivewhl_b_l_link" [label="drivewhl_b_l_link"];
+"drivewhl_b_r_link" [label="drivewhl_b_r_link"];
+"drivewhl_f_l_link" [label="drivewhl_f_l_link"];
+"drivewhl_f_r_link" [label="drivewhl_f_r_link"];
+"gps_link" [label="gps_link"];
+"imu_link" [label="imu_link"];
+"lidar_link" [label="lidar_link"];
+"velodyne" [label="velodyne"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_joint" -> "base_footprint"
+"base_link" -> "drivewhl_b_l_joint" [label="xyz: -0.75 0.436 -0.425 \nrpy: 0 -0 0"]
+"drivewhl_b_l_joint" -> "drivewhl_b_l_link"
+"base_link" -> "drivewhl_b_r_joint" [label="xyz: -0.75 -0.436 -0.425 \nrpy: 0 -0 0"]
+"drivewhl_b_r_joint" -> "drivewhl_b_r_link"
+"base_link" -> "drivewhl_f_l_joint" [label="xyz: 0.75 0.436 -0.425 \nrpy: 0 -0 0"]
+"drivewhl_f_l_joint" -> "drivewhl_f_l_link"
+"base_link" -> "drivewhl_f_r_joint" [label="xyz: 0.75 -0.436 -0.425 \nrpy: 0 -0 0"]
+"drivewhl_f_r_joint" -> "drivewhl_f_r_link"
+"base_link" -> "gps_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"gps_joint" -> "gps_link"
+"base_link" -> "imu_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_joint" -> "imu_link"
+"base_link" -> "lidar_joint" [label="xyz: 0.835 0.02 0.44 \nrpy: 0 -0 0"]
+"lidar_joint" -> "lidar_link"
+"base_link" -> "velodyne_joint" [label="xyz: 0.835 0.02 0.44 \nrpy: 0 -0 0"]
+"velodyne_joint" -> "velodyne"
+}
