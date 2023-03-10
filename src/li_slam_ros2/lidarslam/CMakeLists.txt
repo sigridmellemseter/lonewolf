@@ -33,6 +33,7 @@ g2o::types_slam3d
 g2o::types_slam3d_addons
 g2o::solver_eigen
 )
+find_package(OpenCV REQUIRED)
 
 SET(CMAKE_CXX_FLAGS "-O2 -g ${CMAKE_CXX_FLAGS}")
 
@@ -73,6 +74,7 @@ ament_target_dependencies(lidarslam
   graph_based_slam
   lidarslam_msgs
   ndt_omp_ros2
+  OpenCV
   )
 
 install(
